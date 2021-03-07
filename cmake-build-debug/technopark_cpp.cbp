@@ -45,9 +45,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/svetlana/tp/technopark_cpp/include"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
@@ -68,9 +65,6 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/svetlana/tp/technopark_cpp/include"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
@@ -84,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/svetlana/tp/technopark_cpp/include/date_parser.h">
+			<Option target="technopark_cpp"/>
+		</Unit>
+		<Unit filename="/home/svetlana/tp/technopark_cpp/src/date_parser.c">
+			<Option target="technopark_cpp"/>
+		</Unit>
 		<Unit filename="/home/svetlana/tp/technopark_cpp/src/main.c">
 			<Option target="technopark_cpp"/>
 		</Unit>

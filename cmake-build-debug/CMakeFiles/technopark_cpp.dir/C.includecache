@@ -6,3 +6,25 @@
 
 #IncludeRegexTransform: 
 
+../include/date_parser.h
+stdlib.h
+-
+stdio.h
+-
+
+/home/svetlana/tp/technopark_cpp/src/date_parser.c
+stdlib.h
+-
+stdio.h
+-
+date_parser.h
+/home/svetlana/tp/technopark_cpp/src/date_parser.h
+
+/home/svetlana/tp/technopark_cpp/src/main.c
+stdlib.h
+-
+stdio.h
+-
+date_parser.h
+/home/svetlana/tp/technopark_cpp/src/date_parser.h
+

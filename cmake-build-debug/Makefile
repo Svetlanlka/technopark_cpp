@@ -143,6 +143,33 @@ technopark_cpp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/technopark_cpp.dir/build.make CMakeFiles/technopark_cpp.dir/build
 .PHONY : technopark_cpp/fast
 
+src/date_parser.o: src/date_parser.c.o
+
+.PHONY : src/date_parser.o
+
+# target to build an object file
+src/date_parser.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/technopark_cpp.dir/build.make CMakeFiles/technopark_cpp.dir/src/date_parser.c.o
+.PHONY : src/date_parser.c.o
+
+src/date_parser.i: src/date_parser.c.i
+
+.PHONY : src/date_parser.i
+
+# target to preprocess a source file
+src/date_parser.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/technopark_cpp.dir/build.make CMakeFiles/technopark_cpp.dir/src/date_parser.c.i
+.PHONY : src/date_parser.c.i
+
+src/date_parser.s: src/date_parser.c.s
+
+.PHONY : src/date_parser.s
+
+# target to generate assembly for a file
+src/date_parser.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/technopark_cpp.dir/build.make CMakeFiles/technopark_cpp.dir/src/date_parser.c.s
+.PHONY : src/date_parser.c.s
+
 src/main.o: src/main.c.o
 
 .PHONY : src/main.o
@@ -179,6 +206,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... technopark_cpp"
+	@echo "... src/date_parser.o"
+	@echo "... src/date_parser.i"
+	@echo "... src/date_parser.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

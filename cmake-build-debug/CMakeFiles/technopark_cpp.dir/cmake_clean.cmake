@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/technopark_cpp.dir/src/date_parser.c.o"
   "CMakeFiles/technopark_cpp.dir/src/main.c.o"
   "technopark_cpp"
   "technopark_cpp.pdb"

@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/svetlana/tp/technopark_cpp/src/date_parser.c" "/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/technopark_cpp.dir/src/date_parser.c.o"
   "/home/svetlana/tp/technopark_cpp/src/main.c" "/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/technopark_cpp.dir/src/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

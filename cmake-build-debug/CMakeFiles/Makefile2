@@ -94,12 +94,12 @@ clean: CMakeFiles/technopark_cpp.dir/clean
 CMakeFiles/technopark_cpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/technopark_cpp.dir/build.make CMakeFiles/technopark_cpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/technopark_cpp.dir/build.make CMakeFiles/technopark_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target technopark_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target technopark_cpp"
 .PHONY : CMakeFiles/technopark_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/technopark_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/technopark_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/technopark_cpp.dir/rule

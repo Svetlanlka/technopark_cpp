@@ -1,7 +1,12 @@
-cmake_minimum_required(VERSION 3.17)
-project(technopark_cpp)
+cmake_minimum_required(VERSION 3.16)
+project(technopark_cpp C)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_C_STANDARD 99)
 
-add_executable(technopark_cpp src/main.c)
 include_directories(include)
+
+file(GLOB sources
+        "${PROJECT_SOURCE_DIR}/include/*.h"
+        "${PROJECT_SOURCE_DIR}/src/*.c")
+
+add_executable(technopark_cpp ${sources})
