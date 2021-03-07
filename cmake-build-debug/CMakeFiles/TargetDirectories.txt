@@ -1,0 +1,3 @@
+/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/technopark_cpp.dir
