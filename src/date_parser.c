@@ -3,9 +3,10 @@
 
 #include "date_parser.h"
 
+// Парсинг переданнного массива, который вводим или берем из файла в main
 int Date_parser(char **str, size_t size, struct Dates *dates) {
     int count = 0;
-    for (size_t i = 0; i < size; ++i) {
+    for (size_t i = 0; i < size && str[i]; ++i) {
         if (PARSER_LOG) printf("Check str: %s\n", str[i]);
 
         char *date_str = (char *) malloc (sizeof(char) * SIZE * (size / SIZE + 1));
@@ -24,8 +25,9 @@ int Date_parser(char **str, size_t size, struct Dates *dates) {
     return dates->el_count;
 }
 
+// Парсинг отдельно каждой строки
 int Date_sym_parser(char *str, struct Dates *dates, char *result_str) {
-    int cur_num = 0; // текущее значение (час 0-23/минута -59/секунда 0-59)
+    int cur_num = 0; // текущее значение (час 0-23/минута 0-59/секунда 0-59)
     dates->colon_count = 0;
     dates->count_sym = 0;
 

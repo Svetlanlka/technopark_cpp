@@ -28,3 +28,13 @@ stdio.h
 date_parser.h
 /home/svetlana/tp/technopark_cpp/src/date_parser.h
 
+/home/svetlana/tp/technopark_cpp/tests/date_parser_test.c
+gtest/gtest.h
+/home/svetlana/tp/technopark_cpp/tests/gtest/gtest.h
+date_parser.h
+/home/svetlana/tp/technopark_cpp/tests/date_parser.h
+
+/home/svetlana/tp/technopark_cpp/tests/main.c
+gtest/gtest.h
+/home/svetlana/tp/technopark_cpp/tests/gtest/gtest.h
+
