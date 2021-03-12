@@ -70,7 +70,7 @@ TEST(Date_parser, ok) {
         char *chunk = new char [SIZE];
 
         file.getline(chunk, SIZE);
-        std::cout <<  " chunk: " << chunk;
+        // std::cout <<  " chunk: " << chunk;
 
         for (size_t j = 0; chunk[j]; j++) {
             std::cout << chunk[j];
