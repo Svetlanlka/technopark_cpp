@@ -12,6 +12,16 @@ execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
 execute_process(COMMAND ${CMAKE_COMMAND} --build .
         WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download )
 
+if (CMAKE_BUILD_TYPE MATCHES Debug)
+    include(CodeCoverage)
+    append_coverage_compiler_flags()
+    setup_target_for_coverage_gcovr_html(
+            NAME coverage
+            EXECUTABLE valgrind --leak-check=full --show-leak-kinds=all ctest
+            BASE_DIRECTORY "${PROJECT_SOURCE_DIR}"
+            EXCLUDE "build/*" "test/*" "src/main.c" "src/customer.c")
+endif()
+
 add_subdirectory(${CMAKE_BINARY_DIR}/googletest-src
         ${CMAKE_BINARY_DIR}/googletest-build)
 
