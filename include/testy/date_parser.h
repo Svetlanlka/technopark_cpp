@@ -2,7 +2,7 @@
 #define TECHNOPARK_CPP_INCLUDE_DATE_PARSER_H_
 
 #define LOG_MEMORY 0
-#define PARSER_LOG 1
+#define PARSER_LOG 0
 #define SIZE 1024
 #define INPUT_FILE "../test/test_cases/test4.txt"
 

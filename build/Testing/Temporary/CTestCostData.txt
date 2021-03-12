@@ -1,3 +1,2 @@
-date_parser_test 18 0
+date_parser_test 22 0.000193039
 ---
-date_parser_test

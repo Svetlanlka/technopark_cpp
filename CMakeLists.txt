@@ -12,15 +12,24 @@ execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
 execute_process(COMMAND ${CMAKE_COMMAND} --build .
         WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download )
 
-if (CMAKE_BUILD_TYPE MATCHES Debug)
-    include(CodeCoverage)
-    append_coverage_compiler_flags()
-    setup_target_for_coverage_gcovr_html(
-            NAME coverage
-            EXECUTABLE valgrind --leak-check=full --show-leak-kinds=all ctest
-            BASE_DIRECTORY "${PROJECT_SOURCE_DIR}"
-            EXCLUDE "build/*" "test/*" "src/main.c" "src/customer.c")
-endif()
+
+if ("${TARGET_CPU}" STREQUAL "amd64")
+    set (CMAKE_SIZEOF_VOID_P 8)
+
+    set_property (GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS TRUE)
+    set_property (GLOBAL PROPERTY FIND_LIBRARY_USE_LIB32_PATHS FALSE)
+elseif ("${TARGET_CPU}" STREQUAL "x86")
+    set (CMAKE_SIZEOF_VOID_P 4)
+
+    set_property (GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS FALSE)
+    set_property (GLOBAL PROPERTY FIND_LIBRARY_USE_LIB32_PATHS TRUE)
+
+    if (GCC)
+        set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32")
+        set (CMAKE_C_FLAGS   "${CMAKE_C_FLAGS} -m32")
+    endif ()
+endif ()
+
 
 add_subdirectory(${CMAKE_BINARY_DIR}/googletest-src
         ${CMAKE_BINARY_DIR}/googletest-build)

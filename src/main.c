@@ -23,7 +23,7 @@ int main() {
     }
 
     int count = 0;
-    FILE *file;
+    FILE *file = NULL;
     if (check == 1)
         file = fopen(INPUT_FILE, "r");
 
@@ -46,8 +46,10 @@ int main() {
                 break;
             }
         } else {
-            if (scanf("%s", chunk) != 1 || chunk == NULL) {
-                printf("%s", chunk);
+            if (scanf("%s", chunk) != 1) {
+                if (chunk == NULL)
+                    break;
+                // printf("%s", chunk);
                 free(chunk);
                 if (LOG_MEMORY) printf("free chunk\n");
                 break;

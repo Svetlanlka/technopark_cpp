@@ -7,10 +7,6 @@ extern "C" {
     #include "testy/date_parser.h"
 }
 
-TEST(testy, not_ok) {
-    ASSERT_EQ(0, 0);
-}
-
 // Тестирование функции Date_sym_parser, которая как раз содержит всю логику программы
 // правильная работа программы
 TEST(Date_sym_parser, ok) {
@@ -51,55 +47,58 @@ TEST(Date_sym_parser_wrong_format, not_ok) {
     ASSERT_EQ(Date_sym_parser(str3, &dates), -1);
 }
 
-// тест на основную функцию Date_parser с массивом строк (тестируется открытие файла и заполнение массива дат)
-TEST(Date_parser, ok) {
-    std::ifstream file;
-    file.open("test0.txt");
-
-    if (file.is_open()) std::cout << "success";
-    else std::cout << "error of input file";
-
-    ASSERT_TRUE(file.is_open());
-
-    struct Dates dates = { NULL, 0, 0, 0 };
-    char **input_text = new char *[SIZE];
-    dates.arr_dates = new char *[SIZE];
-
-    size_t i = 0;
-    while(1) {
-        char *chunk = new char [SIZE];
-
-        file.getline(chunk, SIZE);
-        // std::cout <<  " chunk: " << chunk;
-
-        for (size_t j = 0; chunk[j]; j++) {
-            std::cout << chunk[j];
-        }
-        EXPECT_FALSE(chunk == nullptr);
-
-        if (file.eof()) {
-            break;
-        }
-        input_text[i] = chunk;
-        i++;
-    }
-
-    std:: cout << "| " << i;
-    for (size_t j = 0; j < i; j++) {
-        std::cout << input_text[j] << " ";
-    }
-
-    std::cout << Date_parser(input_text, i, &dates);
-
-    for (size_t j = 0; j < i; j++) {
-        delete(input_text[j]);
-    }
-    delete input_text;
-
-    for (size_t j = 0; j < dates.el_count; j++) {
-        delete(dates.arr_dates[j]);
-    }
-    delete dates.arr_dates;
-    file.close();
-}
+// тест на основную функцию Date_parser с массивом строк
+//TEST(Date_parser, ok) {
+//    std::ifstream file;
+//    file.open("test0.txt");
+//
+//    if (file.is_open()) std::cout << "success";
+//    else std::cout << "error of input file";
+//
+//    ASSERT_TRUE(file.is_open());
+//
+//    struct Dates dates = { NULL, 0, 0, 0 };
+//    char **input_text = new char *[SIZE];
+//    dates.arr_dates = new char *[SIZE];
+//
+//    size_t i = 0;
+//    while(1) {
+//        char *chunk = new char [SIZE];
+//
+//        for (size_t j = 0; !file.eof(); j++) {
+//            //file.get(chunk[j]);
+//        }
+//        //file.getline(chunk, SIZE);
+//        std::cout <<  " chunk: " << chunk;
+//
+//        for (size_t j = 0; chunk[j] != '\0'; j++) {
+//            std::cout << chunk[j];
+//        }
+//        EXPECT_FALSE(chunk == nullptr);
+//
+//        if (file.eof()) {
+//            break;
+//        }
+//        input_text[i] = chunk;
+//        i++;
+//    }
+//
+//    std:: cout << "| " << i;
+//    for (size_t j = 0; j < i; j++) {
+//        std::cout << input_text[j] << " ";
+//    }
+//
+//    std::cout << Date_parser(input_text, i, &dates);
+//
+//    for (size_t j = 0; j < i; j++) {
+//        delete(input_text[j]);
+//    }
+//    delete input_text;
+//
+//    for (size_t j = 0; j < dates.el_count; j++) {
+//        delete(dates.arr_dates[j]);
+//    }
+//    delete dates.arr_dates;
+//    file.close();
+//}
 
