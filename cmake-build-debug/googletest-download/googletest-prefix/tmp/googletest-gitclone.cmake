@@ -5,7 +5,7 @@ if(NOT "/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-download/g
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E rm -rf "/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src"
+  COMMAND ${CMAKE_COMMAND} -E remove_directory "/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src"
   RESULT_VARIABLE error_code
   )
 if(error_code)

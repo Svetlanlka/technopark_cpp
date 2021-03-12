@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/technopark_cpp.dir/src/date_parser.c.o CMakeFiles/technopark_cpp.dir/src/main.c.o CMakeFiles/technopark_cpp.dir/tests/date_parser_test.c.o CMakeFiles/technopark_cpp.dir/tests/main.c.o  -o technopark_cpp 
+/usr/bin/cc -g   CMakeFiles/technopark_cpp.dir/src/date_parser.c.o CMakeFiles/technopark_cpp.dir/src/main.c.o  -o technopark_cpp  /usr/local/lib/libgtest.a -lpthread 

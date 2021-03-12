@@ -1,0 +1,92 @@
+Start testing: Mar 12 15:10 MSK
+----------------------------------------------------------
+1/1 Testing: date_parser_test
+1/1 Test: date_parser_test
+Command: "/home/svetlana/tp/technopark_cpp/build/test/date_parser_test_tests"
+Directory: /home/svetlana/tp/technopark_cpp/build/test
+"date_parser_test" start time: Mar 12 15:10 MSK
+Output:
+----------------------------------------------------------
+[==========] Running 6 tests from 6 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from testy
+[ RUN      ] testy.not_ok
+[       OK ] testy.not_ok (0 ms)
+[----------] 1 test from testy (0 ms total)
+
+[----------] 1 test from Date_sym_parser
+[ RUN      ] Date_sym_parser.ok
+correct sym 2 | current num: 2
+correct sym 2 | current num: 22
+colon sym: :
+correct sym 2 | current num: 2
+correct sym 2 | current num: 22
+colon sym: :
+correct sym 2 | current num: 2
+correct sym 2 | current num: 22
+[       OK ] Date_sym_parser.ok (0 ms)
+[----------] 1 test from Date_sym_parser (0 ms total)
+
+[----------] 1 test from Date_sym_parser_not_sym
+[ RUN      ] Date_sym_parser_not_sym.not_ok
+correct sym 2 | current num: 2
+correct sym 2 | current num: 22
+colon sym: :
+correct sym 2 | current num: 2
+error type of sym
+error type of sym
+[       OK ] Date_sym_parser_not_sym.not_ok (0 ms)
+[----------] 1 test from Date_sym_parser_not_sym (0 ms total)
+
+[----------] 1 test from Date_sym_parser_wrong_number
+[ RUN      ] Date_sym_parser_wrong_number.not_ok
+correct sym 2 | current num: 2
+correct sym 5 | current num: 25
+correct sym 2 | current num: 2
+correct sym 2 | current num: 22
+colon sym: :
+correct sym 6 | current num: 6
+correct sym 0 | current num: 60
+correct sym 2 | current num: 2
+correct sym 2 | current num: 22
+colon sym: :
+correct sym 5 | current num: 5
+correct sym 0 | current num: 50
+colon sym: :
+correct sym 6 | current num: 6
+correct sym 0 | current num: 60
+[       OK ] Date_sym_parser_wrong_number.not_ok (0 ms)
+[----------] 1 test from Date_sym_parser_wrong_number (0 ms total)
+
+[----------] 1 test from Date_sym_parser_wrong_format
+[ RUN      ] Date_sym_parser_wrong_format.not_ok
+correct sym 2 | current num: 2
+correct sym 5 | current num: 25
+[       OK ] Date_sym_parser_wrong_format.not_ok (0 ms)
+[----------] 1 test from Date_sym_parser_wrong_format (0 ms total)
+
+[----------] 1 test from Date_parser
+[ RUN      ] Date_parser.ok
+error of input file/home/svetlana/tp/technopark_cpp/test/date_parser_test.cpp:58: Failure
+Value of: file.is_open()
+  Actual: false
+Expected: true
+[  FAILED  ] Date_parser.ok (0 ms)
+[----------] 1 test from Date_parser (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 6 test cases ran. (1 ms total)
+[  PASSED  ] 5 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] Date_parser.ok
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"date_parser_test" end time: Mar 12 15:10 MSK
+"date_parser_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 12 15:10 MSK

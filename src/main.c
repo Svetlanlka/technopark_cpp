@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "date_parser.h"
+#include "testy/date_parser.h"
 
 /*Вариант #69
 Составить программу построчной фильтрации текста, вводимого пользователем.
@@ -46,8 +46,6 @@ int main() {
                 break;
             }
         } else {
-            printf("____");
-
             if (scanf("%s", chunk) != 1 || chunk == NULL) {
                 printf("%s", chunk);
                 free(chunk);
@@ -79,5 +77,6 @@ int main() {
 
     if (check == 1) fclose(file);
     printf("COUNT OF CORRECT DATE: %d\n", count);
+
     return 0;
 }

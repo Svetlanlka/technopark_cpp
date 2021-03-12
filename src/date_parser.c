@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "date_parser.h"
+#include "testy/date_parser.h"
 
 // Парсинг переданнного массива, который вводим или берем из файла в main
 int Date_parser(char **str, size_t size, struct Dates *dates) {
@@ -12,7 +12,7 @@ int Date_parser(char **str, size_t size, struct Dates *dates) {
         char *date_str = (char *) malloc (sizeof(char) * SIZE * (size / SIZE + 1));
         if (LOG_MEMORY) printf("malloc date_str (to arr_dates)\n");
 
-        if (Date_sym_parser(str[i], dates, date_str) != -1) {
+        if (Date_sym_parser(str[i], dates) != -1) {
             if (PARSER_LOG) printf("\nADD\n");
             dates->arr_dates[dates->el_count++] = date_str;
         } else {
@@ -26,7 +26,7 @@ int Date_parser(char **str, size_t size, struct Dates *dates) {
 }
 
 // Парсинг отдельно каждой строки
-int Date_sym_parser(char *str, struct Dates *dates, char *result_str) {
+int Date_sym_parser(const char *str, struct Dates *dates) {
     int cur_num = 0; // текущее значение (час 0-23/минута 0-59/секунда 0-59)
     dates->colon_count = 0;
     dates->count_sym = 0;
@@ -57,6 +57,8 @@ int Date_sym_parser(char *str, struct Dates *dates, char *result_str) {
     }
 
     if (dates->colon_count != 2)
+        return -1;
+    if (dates->count_sym == 0)
         return -1;
     return 0;
 }

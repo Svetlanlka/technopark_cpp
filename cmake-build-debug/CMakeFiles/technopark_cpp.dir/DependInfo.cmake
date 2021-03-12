@@ -6,8 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/svetlana/tp/technopark_cpp/src/date_parser.c" "/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/technopark_cpp.dir/src/date_parser.c.o"
   "/home/svetlana/tp/technopark_cpp/src/main.c" "/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/technopark_cpp.dir/src/main.c.o"
-  "/home/svetlana/tp/technopark_cpp/tests/date_parser_test.c" "/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/technopark_cpp.dir/tests/date_parser_test.c.o"
-  "/home/svetlana/tp/technopark_cpp/tests/main.c" "/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/technopark_cpp.dir/tests/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -5,7 +5,7 @@
 		<Option title="technopark_cpp"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\googletest-src\;CMake Files\cmake-build-debug\googletest-src\googlemock\;CMake Files\cmake-build-debug\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\googletest-src\googletest\;CMake Files\cmake-build-debug\googletest-src\googletest\cmake\;CMake Files\tests\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\googletest-src\;CMake Files\cmake-build-debug\googletest-src\googlemock\;CMake Files\cmake-build-debug\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\googletest-src\googletest\;CMake Files\cmake-build-debug\googletest-src\googletest\cmake\;CMake Files\test\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug"/>
@@ -22,16 +22,6 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install/local">
-				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -57,6 +47,46 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="technopark_cpp">
 				<Option output="/home/svetlana/tp/technopark_cpp/cmake-build-debug/technopark_cpp" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug"/>
@@ -65,6 +95,9 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/svetlana/tp/technopark_cpp/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
@@ -85,6 +118,9 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/svetlana/tp/technopark_cpp/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
@@ -92,36 +128,6 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 technopark_cpp/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test">
-				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -138,6 +144,9 @@
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googlemock"/>
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
@@ -161,6 +170,9 @@
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googlemock"/>
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
@@ -184,6 +196,9 @@
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googlemock"/>
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
@@ -207,6 +222,9 @@
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googlemock"/>
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
@@ -219,48 +237,6 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="gtest">
-				<Option output="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/include"/>
-					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gtest/fast">
-				<Option output="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/include"/>
-					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="gtest_main">
 				<Option output="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest"/>
@@ -270,6 +246,9 @@
 				<Compiler>
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
@@ -291,6 +270,9 @@
 				<Compiler>
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/include"/>
 					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
@@ -301,6 +283,104 @@
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/include"/>
+					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/include"/>
+					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="date_parser_test_tests">
+				<Option output="/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/date_parser_test_tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/svetlana/tp/technopark_cpp/include"/>
+					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/include"/>
+					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 date_parser_test_tests"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="date_parser_test_tests/fast">
+				<Option output="/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/date_parser_test_tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/svetlana/tp/technopark_cpp/include"/>
+					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/include"/>
+					<Add directory="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 date_parser_test_tests/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -316,20 +396,18 @@
 		<Unit filename="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/svetlana/tp/technopark_cpp/include/date_parser.h">
-			<Option target="technopark_cpp"/>
-		</Unit>
 		<Unit filename="/home/svetlana/tp/technopark_cpp/src/date_parser.c">
 			<Option target="technopark_cpp"/>
+			<Option target="date_parser_test_tests"/>
 		</Unit>
 		<Unit filename="/home/svetlana/tp/technopark_cpp/src/main.c">
 			<Option target="technopark_cpp"/>
 		</Unit>
-		<Unit filename="/home/svetlana/tp/technopark_cpp/tests/date_parser_test.c">
-			<Option target="technopark_cpp"/>
+		<Unit filename="/home/svetlana/tp/technopark_cpp/test/date_parser_test.cpp">
+			<Option target="date_parser_test_tests"/>
 		</Unit>
-		<Unit filename="/home/svetlana/tp/technopark_cpp/tests/main.c">
-			<Option target="technopark_cpp"/>
+		<Unit filename="/home/svetlana/tp/technopark_cpp/test/main.cpp">
+			<Option target="date_parser_test_tests"/>
 		</Unit>
 		<Unit filename="/home/svetlana/tp/technopark_cpp/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
@@ -364,8 +442,8 @@
 		<Unit filename="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\googletest-src\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/svetlana/tp/technopark_cpp/tests/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\tests\"/>
+		<Unit filename="/home/svetlana/tp/technopark_cpp/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

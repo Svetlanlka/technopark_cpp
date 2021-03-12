@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/svetlana/tp/technopark_cpp/cmake-build-debug/tests/cmake_install.cmake")
+  include("/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
