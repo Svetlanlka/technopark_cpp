@@ -17,7 +17,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2eaea054-25ac-40bf-9678-7540a2325c97" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/googletest-src" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/googletest-src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/googletest-src/googlemock/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/googletest-src/googlemock/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/googletest-src/googlemock/include/gmock/gmock-generated-nice-strict.h" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/googletest-src/googlemock/include/gmock/gmock-generated-nice-strict.h" afterDir="false" />
@@ -276,7 +275,7 @@
       <workItem from="1615553597964" duration="1886000" />
       <workItem from="1615555499767" duration="1430000" />
       <workItem from="1615577799784" duration="1814000" />
-      <workItem from="1615579637233" duration="1197000" />
+      <workItem from="1615579637233" duration="1509000" />
     </task>
     <servers />
   </component>
