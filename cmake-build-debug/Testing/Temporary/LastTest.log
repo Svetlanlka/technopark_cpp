@@ -1,3 +1,43 @@
-Start testing: Mar 12 23:07 MSK
+Start testing: Mar 12 23:24 MSK
 ----------------------------------------------------------
-End testing: Mar 12 23:07 MSK
+1/1 Testing: date_parser_test
+1/1 Test: date_parser_test
+Command: "/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/date_parser_test_tests"
+Directory: /home/svetlana/tp/technopark_cpp/cmake-build-debug/test
+"date_parser_test" start time: Mar 12 23:24 MSK
+Output:
+----------------------------------------------------------
+[==========] Running 4 test from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from Date_sym_parser
+[ RUN      ] Date_sym_parser.ok
+[       OK ] Date_sym_parser.ok (0 ms)
+[----------] 1 test from Date_sym_parser (0 ms total)
+
+[----------] 1 test from Date_sym_parser_not_sym
+[ RUN      ] Date_sym_parser_not_sym.not_ok
+[       OK ] Date_sym_parser_not_sym.not_ok (0 ms)
+[----------] 1 test from Date_sym_parser_not_sym (0 ms total)
+
+[----------] 1 test from Date_sym_parser_wrong_number
+[ RUN      ] Date_sym_parser_wrong_number.not_ok
+[       OK ] Date_sym_parser_wrong_number.not_ok (0 ms)
+[----------] 1 test from Date_sym_parser_wrong_number (0 ms total)
+
+[----------] 1 test from Date_sym_parser_wrong_format
+[ RUN      ] Date_sym_parser_wrong_format.not_ok
+[       OK ] Date_sym_parser_wrong_format.not_ok (0 ms)
+[----------] 1 test from Date_sym_parser_wrong_format (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 test from 4 test cases ran. (0 ms total)
+[  PASSED  ] 4 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"date_parser_test" end time: Mar 12 23:24 MSK
+"date_parser_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 12 23:24 MSK
