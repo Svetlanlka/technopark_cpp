@@ -5,7 +5,6 @@
 
 // Парсинг переданнного массива, который вводим или берем из файла в main
 int Date_parser(char **str, size_t size, struct Dates *dates) {
-    int count = 0;
     for (size_t i = 0; i < size && str[i]; ++i) {
         if (PARSER_LOG) printf("Check str: %s\n", str[i]);
 

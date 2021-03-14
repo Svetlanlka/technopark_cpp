@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googlemock/src/gmock_main.cc" "/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+  "/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googlemock/src/gmock_main.cc" "/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

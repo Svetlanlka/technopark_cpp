@@ -26,10 +26,6 @@ string
 testy/date_parser.h
 /home/svetlana/tp/technopark_cpp/test/testy/date_parser.h
 
-/home/svetlana/tp/technopark_cpp/test/main.cpp
-gtest/gtest.h
-/home/svetlana/tp/technopark_cpp/test/gtest/gtest.h
-
 googletest-src/googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h
 googletest-src/googletest/include/gtest/gtest/internal/gtest-death-test-internal.h

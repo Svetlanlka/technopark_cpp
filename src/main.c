@@ -22,7 +22,6 @@ int main() {
     	return -1;
     }
 
-    int count = 0;
     FILE *file = NULL;
     if (check == 1)
         file = fopen(INPUT_FILE, "r");
@@ -40,16 +39,16 @@ int main() {
         char *chunk = (char *) malloc(sizeof(char) * SIZE); // при больших строках size увеличится
         if (LOG_MEMORY) printf("malloc chunk\n");
         if (check == 1) {
-            if (fscanf(file, "%s", chunk) != 1) {
+            if (fscanf(file, "%1024s", chunk) != 1) {
                 free(chunk);
                 if (LOG_MEMORY) printf("free chunk\n");
                 break;
             }
         } else {
-            if (scanf("%s", chunk) != 1) {
-                if (chunk == NULL)
+            if (scanf("%1024s", chunk) != 1) {
+                if (!chunk)
                     break;
-                // printf("%s", chunk);
+                 printf("%s", chunk);
                 free(chunk);
                 if (LOG_MEMORY) printf("free chunk\n");
                 break;
@@ -60,7 +59,7 @@ int main() {
         i++;
     }
 
-    count = Date_parser(input_text, i, &dates);
+    int count = Date_parser(input_text, i, &dates);
 
     // чистка памяти
     for (size_t j = 0; j < i; j++) {

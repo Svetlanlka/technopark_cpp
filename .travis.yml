@@ -1,6 +1,15 @@
 script:
+  - sudo apt install gcovr
+  - sudo apt install valgrind
+  - sudo apt-get install python3-setuptools
+  - sudo apt install cppcheck
+  - sudo apt-get install lynx
+  - cppcheck --suppress=missingIncludeSystem src/*.c
   - mkdir build
   - cd build
-  - cmake ..
-  - cmake --build .
+  - cmake -DCMAKE_BUILD_TYPE=Debug .. && make
   - ctest --verbose
+  - valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ctest
+  - ctest --output-on-failure
+  - make coverage
+  - lynx coverage/index.html

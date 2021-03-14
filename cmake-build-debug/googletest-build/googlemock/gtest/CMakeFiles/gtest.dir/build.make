@@ -57,27 +57,27 @@ include googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/progress.make
 # Include the compile flags for this target's objects.
 include googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/flags.make
 
-googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/flags.make
-googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: googletest-src/googletest/src/gtest-all.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/src/gtest-all.cc
+googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.o: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/flags.make
+googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.o: googletest-src/googletest/src/gtest-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.o"
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest.dir/src/gtest-all.o -c /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/src/gtest-all.cc
 
-googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest.dir/src/gtest-all.cc.i"
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/src/gtest-all.cc > CMakeFiles/gtest.dir/src/gtest-all.cc.i
+googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest.dir/src/gtest-all.i"
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/src/gtest-all.cc > CMakeFiles/gtest.dir/src/gtest-all.i
 
-googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest.dir/src/gtest-all.cc.s"
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/src/gtest-all.cc -o CMakeFiles/gtest.dir/src/gtest-all.cc.s
+googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest.dir/src/gtest-all.s"
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/src/gtest-all.cc -o CMakeFiles/gtest.dir/src/gtest-all.s
 
 # Object files for target gtest
 gtest_OBJECTS = \
-"CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+"CMakeFiles/gtest.dir/src/gtest-all.o"
 
 # External object files for target gtest
 gtest_EXTERNAL_OBJECTS =
 
-googletest-build/googlemock/gtest/libgtestd.a: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+googletest-build/googlemock/gtest/libgtestd.a: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.o
 googletest-build/googlemock/gtest/libgtestd.a: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make
 googletest-build/googlemock/gtest/libgtestd.a: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libgtestd.a"

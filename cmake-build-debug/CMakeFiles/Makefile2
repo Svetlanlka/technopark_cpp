@@ -66,6 +66,7 @@ preinstall: test/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/coverage.dir/clean
 clean: CMakeFiles/technopark_cpp.dir/clean
 clean: googletest-build/clean
 clean: test/clean
@@ -151,13 +152,40 @@ test/clean: test/CMakeFiles/date_parser_test_tests.dir/clean
 .PHONY : test/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/coverage.dir
+
+# All Build rule for target.
+CMakeFiles/coverage.dir/all:
+	$(MAKE) -f CMakeFiles/coverage.dir/build.make CMakeFiles/coverage.dir/depend
+	$(MAKE) -f CMakeFiles/coverage.dir/build.make CMakeFiles/coverage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=1 "Built target coverage"
+.PHONY : CMakeFiles/coverage.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/coverage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/coverage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/coverage.dir/rule
+
+# Convenience name for target.
+coverage: CMakeFiles/coverage.dir/rule
+
+.PHONY : coverage
+
+# clean rule for target.
+CMakeFiles/coverage.dir/clean:
+	$(MAKE) -f CMakeFiles/coverage.dir/build.make CMakeFiles/coverage.dir/clean
+.PHONY : CMakeFiles/coverage.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/technopark_cpp.dir
 
 # All Build rule for target.
 CMakeFiles/technopark_cpp.dir/all:
 	$(MAKE) -f CMakeFiles/technopark_cpp.dir/build.make CMakeFiles/technopark_cpp.dir/depend
 	$(MAKE) -f CMakeFiles/technopark_cpp.dir/build.make CMakeFiles/technopark_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=13,14,15 "Built target technopark_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=14,15,16 "Built target technopark_cpp"
 .PHONY : CMakeFiles/technopark_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -185,7 +213,7 @@ googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: googletest-build/goog
 googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=8,9 "Built target gmock_main"
 .PHONY : googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -212,7 +240,7 @@ googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 googletest-build/googlemock/CMakeFiles/gmock.dir/all: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock.dir/build.make googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock.dir/build.make googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=6,7 "Built target gmock"
 .PHONY : googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -239,7 +267,7 @@ googletest-build/googlemock/CMakeFiles/gmock.dir/clean:
 googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/all: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target gtest_main"
 .PHONY : googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -266,7 +294,7 @@ googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/clean:
 googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=10,11 "Built target gtest"
 .PHONY : googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -294,7 +322,7 @@ test/CMakeFiles/date_parser_test_tests.dir/all: googletest-build/googlemock/gtes
 test/CMakeFiles/date_parser_test_tests.dir/all: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/depend
 	$(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target date_parser_test_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=2,3,4,5 "Built target date_parser_test_tests"
 .PHONY : test/CMakeFiles/date_parser_test_tests.dir/all
 
 # Build rule for subdir invocation for target.

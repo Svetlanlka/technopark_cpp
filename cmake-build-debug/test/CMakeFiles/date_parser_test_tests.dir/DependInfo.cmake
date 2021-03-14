@@ -16,8 +16,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "googletest-src/googletest"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/svetlana/tp/technopark_cpp/test/date_parser_test.cpp" "/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.o"
-  "/home/svetlana/tp/technopark_cpp/test/main.cpp" "/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/CMakeFiles/date_parser_test_tests.dir/main.cpp.o"
+  "/home/svetlana/tp/technopark_cpp/test/date_parser_test.cpp" "/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.o"
+  "/home/svetlana/tp/technopark_cpp/test/main.cpp" "/home/svetlana/tp/technopark_cpp/cmake-build-debug/test/CMakeFiles/date_parser_test_tests.dir/main.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

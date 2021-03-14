@@ -94,7 +94,6 @@ technopark_cpp_EXTERNAL_OBJECTS =
 technopark_cpp: CMakeFiles/technopark_cpp.dir/src/date_parser.c.o
 technopark_cpp: CMakeFiles/technopark_cpp.dir/src/main.c.o
 technopark_cpp: CMakeFiles/technopark_cpp.dir/build.make
-technopark_cpp: /usr/local/lib/libgtest.a
 technopark_cpp: CMakeFiles/technopark_cpp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable technopark_cpp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/technopark_cpp.dir/link.txt --verbose=$(VERBOSE)

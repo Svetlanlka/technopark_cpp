@@ -5,7 +5,7 @@
 		<Option title="gmock"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\googletest-src\;CMake Files\cmake-build-debug\googletest-src\googlemock\;CMake Files\cmake-build-debug\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\googletest-src\googletest\;CMake Files\cmake-build-debug\googletest-src\googletest\cmake\;CMake Files\test\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\googletest-src\;CMake Files\cmake-build-debug\googletest-src\googlemock\;CMake Files\cmake-build-debug\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug\googletest-src\googletest\;CMake Files\cmake-build-debug\googletest-src\googletest\cmake\;CMake Files\CMakeModules\;CMake Files\test\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-build/googlemock"/>
@@ -262,6 +262,9 @@
 		</Unit>
 		<Unit filename="/home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\googletest-src\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/svetlana/tp/technopark_cpp/CMakeModules/CodeCoverage.cmake">
+			<Option virtualFolder="CMake Files\CMakeModules\"/>
 		</Unit>
 		<Unit filename="/home/svetlana/tp/technopark_cpp/test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\"/>

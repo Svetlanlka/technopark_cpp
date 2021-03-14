@@ -70,44 +70,44 @@ test/CMakeFiles/date_parser_test_tests.dir/__/src/date_parser.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/date_parser_test_tests.dir/__/src/date_parser.c.s"
 	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/test && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/svetlana/tp/technopark_cpp/src/date_parser.c -o CMakeFiles/date_parser_test_tests.dir/__/src/date_parser.c.s
 
-test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.o: test/CMakeFiles/date_parser_test_tests.dir/flags.make
-test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.o: ../test/date_parser_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.o"
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.o -c /home/svetlana/tp/technopark_cpp/test/date_parser_test.cpp
+test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.o: test/CMakeFiles/date_parser_test_tests.dir/flags.make
+test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.o: ../test/date_parser_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.o"
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/date_parser_test_tests.dir/date_parser_test.o -c /home/svetlana/tp/technopark_cpp/test/date_parser_test.cpp
 
-test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.i"
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/svetlana/tp/technopark_cpp/test/date_parser_test.cpp > CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.i
+test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/date_parser_test_tests.dir/date_parser_test.i"
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/svetlana/tp/technopark_cpp/test/date_parser_test.cpp > CMakeFiles/date_parser_test_tests.dir/date_parser_test.i
 
-test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.s"
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/svetlana/tp/technopark_cpp/test/date_parser_test.cpp -o CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.s
+test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/date_parser_test_tests.dir/date_parser_test.s"
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/svetlana/tp/technopark_cpp/test/date_parser_test.cpp -o CMakeFiles/date_parser_test_tests.dir/date_parser_test.s
 
-test/CMakeFiles/date_parser_test_tests.dir/main.cpp.o: test/CMakeFiles/date_parser_test_tests.dir/flags.make
-test/CMakeFiles/date_parser_test_tests.dir/main.cpp.o: ../test/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/date_parser_test_tests.dir/main.cpp.o"
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/date_parser_test_tests.dir/main.cpp.o -c /home/svetlana/tp/technopark_cpp/test/main.cpp
+test/CMakeFiles/date_parser_test_tests.dir/main.o: test/CMakeFiles/date_parser_test_tests.dir/flags.make
+test/CMakeFiles/date_parser_test_tests.dir/main.o: ../test/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/date_parser_test_tests.dir/main.o"
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/date_parser_test_tests.dir/main.o -c /home/svetlana/tp/technopark_cpp/test/main.cpp
 
-test/CMakeFiles/date_parser_test_tests.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/date_parser_test_tests.dir/main.cpp.i"
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/svetlana/tp/technopark_cpp/test/main.cpp > CMakeFiles/date_parser_test_tests.dir/main.cpp.i
+test/CMakeFiles/date_parser_test_tests.dir/main.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/date_parser_test_tests.dir/main.i"
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/svetlana/tp/technopark_cpp/test/main.cpp > CMakeFiles/date_parser_test_tests.dir/main.i
 
-test/CMakeFiles/date_parser_test_tests.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/date_parser_test_tests.dir/main.cpp.s"
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/svetlana/tp/technopark_cpp/test/main.cpp -o CMakeFiles/date_parser_test_tests.dir/main.cpp.s
+test/CMakeFiles/date_parser_test_tests.dir/main.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/date_parser_test_tests.dir/main.s"
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/svetlana/tp/technopark_cpp/test/main.cpp -o CMakeFiles/date_parser_test_tests.dir/main.s
 
 # Object files for target date_parser_test_tests
 date_parser_test_tests_OBJECTS = \
 "CMakeFiles/date_parser_test_tests.dir/__/src/date_parser.c.o" \
-"CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.o" \
-"CMakeFiles/date_parser_test_tests.dir/main.cpp.o"
+"CMakeFiles/date_parser_test_tests.dir/date_parser_test.o" \
+"CMakeFiles/date_parser_test_tests.dir/main.o"
 
 # External object files for target date_parser_test_tests
 date_parser_test_tests_EXTERNAL_OBJECTS =
 
 test/date_parser_test_tests: test/CMakeFiles/date_parser_test_tests.dir/__/src/date_parser.c.o
-test/date_parser_test_tests: test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.o
-test/date_parser_test_tests: test/CMakeFiles/date_parser_test_tests.dir/main.cpp.o
+test/date_parser_test_tests: test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.o
+test/date_parser_test_tests: test/CMakeFiles/date_parser_test_tests.dir/main.o
 test/date_parser_test_tests: test/CMakeFiles/date_parser_test_tests.dir/build.make
 test/date_parser_test_tests: googletest-build/googlemock/gtest/libgtest_maind.a
 test/date_parser_test_tests: googletest-build/googlemock/gtest/libgtestd.a

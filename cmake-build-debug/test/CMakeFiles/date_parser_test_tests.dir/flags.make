@@ -9,7 +9,7 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/svetlana/tp/technopark_cpp/include -isystem /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest/include -isystem /home/svetlana/tp/technopark_cpp/cmake-build-debug/googletest-src/googletest 
 
-CXX_FLAGS = -g   -pthread
+CXX_FLAGS = -g -O0 -Wall -fprofile-arcs -ftest-coverage -g   -pthread
 
 CXX_DEFINES = 
 

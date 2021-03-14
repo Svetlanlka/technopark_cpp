@@ -197,59 +197,35 @@ gmock/fast:
 	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock.dir/build.make googletest-build/googlemock/CMakeFiles/gmock.dir/build
 .PHONY : gmock/fast
 
-src/gmock-all.o: src/gmock-all.cc.o
-
+# target to build an object file
+src/gmock-all.o:
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock.dir/build.make googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.o
 .PHONY : src/gmock-all.o
 
-# target to build an object file
-src/gmock-all.cc.o:
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock.dir/build.make googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
-.PHONY : src/gmock-all.cc.o
-
-src/gmock-all.i: src/gmock-all.cc.i
-
+# target to preprocess a source file
+src/gmock-all.i:
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock.dir/build.make googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.i
 .PHONY : src/gmock-all.i
 
-# target to preprocess a source file
-src/gmock-all.cc.i:
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock.dir/build.make googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.i
-.PHONY : src/gmock-all.cc.i
-
-src/gmock-all.s: src/gmock-all.cc.s
-
+# target to generate assembly for a file
+src/gmock-all.s:
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock.dir/build.make googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.s
 .PHONY : src/gmock-all.s
 
-# target to generate assembly for a file
-src/gmock-all.cc.s:
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock.dir/build.make googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.s
-.PHONY : src/gmock-all.cc.s
-
-src/gmock_main.o: src/gmock_main.cc.o
-
+# target to build an object file
+src/gmock_main.o:
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.o
 .PHONY : src/gmock_main.o
 
-# target to build an object file
-src/gmock_main.cc.o:
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
-.PHONY : src/gmock_main.cc.o
-
-src/gmock_main.i: src/gmock_main.cc.i
-
+# target to preprocess a source file
+src/gmock_main.i:
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.i
 .PHONY : src/gmock_main.i
 
-# target to preprocess a source file
-src/gmock_main.cc.i:
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.i
-.PHONY : src/gmock_main.cc.i
-
-src/gmock_main.s: src/gmock_main.cc.s
-
-.PHONY : src/gmock_main.s
-
 # target to generate assembly for a file
-src/gmock_main.cc.s:
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.s
-.PHONY : src/gmock_main.cc.s
+src/gmock_main.s:
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.s
+.PHONY : src/gmock_main.s
 
 # Help Target
 help:

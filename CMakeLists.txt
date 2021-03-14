@@ -2,8 +2,10 @@ cmake_minimum_required(VERSION 3.12)
 project(technopark_cpp)
 
 set(CMAKE_C_STANDARD 99)
-set(CMAKE_CXX_REQUIRED ON)
+#set(CMAKE_CXX_REQUIRED ON)
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeModules)
+set(CMAKE_CXX_FLAGS "-g -O0 -Wall -fprofile-arcs -ftest-coverage")
+set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 
 configure_file(CMakeLists.txt.in
         googletest-download/CMakeLists.txt)
@@ -52,3 +54,13 @@ add_executable(technopark_cpp ${sources})
 
 #add_executable(technopark_cpp test/main.cpp)
 target_link_libraries(technopark_cpp ${GTEST_LIBRARIES} -lpthread)
+
+if (CMAKE_BUILD_TYPE MATCHES Debug)
+    include(CodeCoverage)
+    append_coverage_compiler_flags()
+    setup_target_for_coverage_lcov(
+            NAME coverage
+            EXECUTABLE ctest
+            BASE_DIRECTORY "${PROJECT_SOURCE_DIR}"
+            EXCLUDE "build/*" "test/*" "src/main.c" "src/date_parser.c")
+endif()

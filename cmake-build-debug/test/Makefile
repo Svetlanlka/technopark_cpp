@@ -209,59 +209,35 @@ __/src/date_parser.c.s:
 	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/__/src/date_parser.c.s
 .PHONY : __/src/date_parser.c.s
 
-date_parser_test.o: date_parser_test.cpp.o
-
+# target to build an object file
+date_parser_test.o:
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.o
 .PHONY : date_parser_test.o
 
-# target to build an object file
-date_parser_test.cpp.o:
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.o
-.PHONY : date_parser_test.cpp.o
-
-date_parser_test.i: date_parser_test.cpp.i
-
+# target to preprocess a source file
+date_parser_test.i:
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.i
 .PHONY : date_parser_test.i
 
-# target to preprocess a source file
-date_parser_test.cpp.i:
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.i
-.PHONY : date_parser_test.cpp.i
-
-date_parser_test.s: date_parser_test.cpp.s
-
+# target to generate assembly for a file
+date_parser_test.s:
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.s
 .PHONY : date_parser_test.s
 
-# target to generate assembly for a file
-date_parser_test.cpp.s:
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/date_parser_test.cpp.s
-.PHONY : date_parser_test.cpp.s
-
-main.o: main.cpp.o
-
+# target to build an object file
+main.o:
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/main.o
 .PHONY : main.o
 
-# target to build an object file
-main.cpp.o:
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
+# target to preprocess a source file
+main.i:
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/main.i
 .PHONY : main.i
 
-# target to preprocess a source file
-main.cpp.i:
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
 # target to generate assembly for a file
-main.cpp.s:
-	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/main.cpp.s
-.PHONY : main.cpp.s
+main.s:
+	cd /home/svetlana/tp/technopark_cpp/cmake-build-debug && $(MAKE) -f test/CMakeFiles/date_parser_test_tests.dir/build.make test/CMakeFiles/date_parser_test_tests.dir/main.s
+.PHONY : main.s
 
 # Help Target
 help:
