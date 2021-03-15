@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2021-03-14 14:42:23</td>
+            <td class="headerValue">2021-03-15 08:23:07</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">13</td>
@@ -983,13 +983,13 @@
 <a name="921"><span class="lineNum">     921 </span>            : </a>
 <a name="922"><span class="lineNum">     922 </span>            :   template &lt;typename _Tp, typename _Up&gt;</a>
 <a name="923"><span class="lineNum">     923 </span>            :     inline __enable_if_t&lt;std::__is_bitwise_relocatable&lt;_Tp&gt;::value, _Tp*&gt;</a>
-<a name="924"><span class="lineNum">     924 </span><span class="lineCov">         30 :     __relocate_a_1(_Tp* __first, _Tp* __last,</span></a>
+<a name="924"><span class="lineNum">     924 </span><span class="lineCov">         38 :     __relocate_a_1(_Tp* __first, _Tp* __last,</span></a>
 <a name="925"><span class="lineNum">     925 </span>            :                    _Tp* __result, allocator&lt;_Up&gt;&amp;) noexcept</a>
 <a name="926"><span class="lineNum">     926 </span>            :     {</a>
-<a name="927"><span class="lineNum">     927 </span><span class="lineCov">         30 :       ptrdiff_t __count = __last - __first;</span></a>
-<a name="928"><span class="lineNum">     928 </span><span class="lineCov">         30 :       if (__count &gt; 0)</span></a>
-<a name="929"><span class="lineNum">     929 </span><span class="lineCov">          4 :         __builtin_memmove(__result, __first, __count * sizeof(_Tp));</span></a>
-<a name="930"><span class="lineNum">     930 </span><span class="lineCov">         30 :       return __result + __count;</span></a>
+<a name="927"><span class="lineNum">     927 </span><span class="lineCov">         38 :       ptrdiff_t __count = __last - __first;</span></a>
+<a name="928"><span class="lineNum">     928 </span><span class="lineCov">         38 :       if (__count &gt; 0)</span></a>
+<a name="929"><span class="lineNum">     929 </span><span class="lineCov">          6 :         __builtin_memmove(__result, __first, __count * sizeof(_Tp));</span></a>
+<a name="930"><span class="lineNum">     930 </span><span class="lineCov">         38 :       return __result + __count;</span></a>
 <a name="931"><span class="lineNum">     931 </span>            :     }</a>
 <a name="932"><span class="lineNum">     932 </span>            : </a>
 <a name="933"><span class="lineNum">     933 </span>            :   template &lt;typename _InputIterator, typename _ForwardIterator,</a>
@@ -1017,15 +1017,15 @@
 <a name="955"><span class="lineNum">     955 </span>            :   template &lt;typename _InputIterator, typename _ForwardIterator,</a>
 <a name="956"><span class="lineNum">     956 </span>            :             typename _Allocator&gt;</a>
 <a name="957"><span class="lineNum">     957 </span>            :     inline _ForwardIterator</a>
-<a name="958"><span class="lineNum">     958 </span><span class="lineCov">         32 :     __relocate_a(_InputIterator __first, _InputIterator __last,</span></a>
+<a name="958"><span class="lineNum">     958 </span><span class="lineCov">         40 :     __relocate_a(_InputIterator __first, _InputIterator __last,</span></a>
 <a name="959"><span class="lineNum">     959 </span>            :                  _ForwardIterator __result, _Allocator&amp; __alloc)</a>
 <a name="960"><span class="lineNum">     960 </span>            :     noexcept(noexcept(__relocate_a_1(std::__niter_base(__first),</a>
 <a name="961"><span class="lineNum">     961 </span>            :                                      std::__niter_base(__last),</a>
 <a name="962"><span class="lineNum">     962 </span>            :                                      std::__niter_base(__result), __alloc)))</a>
 <a name="963"><span class="lineNum">     963 </span>            :     {</a>
-<a name="964"><span class="lineNum">     964 </span><span class="lineCov">         32 :       return __relocate_a_1(std::__niter_base(__first),</span></a>
+<a name="964"><span class="lineNum">     964 </span><span class="lineCov">         40 :       return __relocate_a_1(std::__niter_base(__first),</span></a>
 <a name="965"><span class="lineNum">     965 </span>            :                             std::__niter_base(__last),</a>
-<a name="966"><span class="lineNum">     966 </span><span class="lineCov">         32 :                             std::__niter_base(__result), __alloc);</span></a>
+<a name="966"><span class="lineNum">     966 </span><span class="lineCov">         40 :                             std::__niter_base(__result), __alloc);</span></a>
 <a name="967"><span class="lineNum">     967 </span>            :     }</a>
 <a name="968"><span class="lineNum">     968 </span>            : #endif</a>
 <a name="969"><span class="lineNum">     969 </span>            : </a>

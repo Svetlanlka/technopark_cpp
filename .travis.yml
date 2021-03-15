@@ -7,8 +7,7 @@ script:
   - cppcheck --suppress=missingIncludeSystem src/*.c
   - mkdir build
   - cd build
-  - cmake -DCMAKE_BUILD_TYPE=Debug .. && make
-  - ctest --verbose
+  - cmake .. && make && ctest --verbose
   - valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ctest
   - ctest --output-on-failure
   - make coverage

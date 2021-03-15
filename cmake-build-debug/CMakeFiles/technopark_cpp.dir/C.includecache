@@ -22,3 +22,11 @@ stdio.h
 testy/date_parser.h
 /home/svetlana/tp/technopark_cpp/src/testy/date_parser.h
 
+/home/svetlana/tp/technopark_cpp/src/main.c
+stdlib.h
+-
+stdio.h
+-
+testy/date_parser.h
+/home/svetlana/tp/technopark_cpp/src/testy/date_parser.h
+

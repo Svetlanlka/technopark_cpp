@@ -37,12 +37,12 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2021-03-14 14:42:23</td>
+            <td class="headerValue">2021-03-15 08:23:07</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntry">9</td>
-            <td class="headerCovTableEntry">28</td>
-            <td class="headerCovTableEntryLo">32.1 %</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntryLo">34.5 %</td>
           </tr>
           <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -494,12 +494,12 @@
 <a name="432"><span class="lineNum">     432 </span>            : // returned for different types.  Calling the function twice with the</a>
 <a name="433"><span class="lineNum">     433 </span>            : // same type argument is guaranteed to return the same ID.</a>
 <a name="434"><span class="lineNum">     434 </span>            : template &lt;typename T&gt;</a>
-<a name="435"><span class="lineNum">     435 </span><span class="lineCov">          5 : TypeId GetTypeId() {</span></a>
+<a name="435"><span class="lineNum">     435 </span><span class="lineCov">          6 : TypeId GetTypeId() {</span></a>
 <a name="436"><span class="lineNum">     436 </span>            :   // The compiler is required to allocate a different</a>
 <a name="437"><span class="lineNum">     437 </span>            :   // TypeIdHelper&lt;T&gt;::dummy_ variable for each T used to instantiate</a>
 <a name="438"><span class="lineNum">     438 </span>            :   // the template.  Therefore, the address of dummy_ is guaranteed to</a>
 <a name="439"><span class="lineNum">     439 </span>            :   // be unique.</a>
-<a name="440"><span class="lineNum">     440 </span><span class="lineCov">          5 :   return &amp;(TypeIdHelper&lt;T&gt;::dummy_);</span></a>
+<a name="440"><span class="lineNum">     440 </span><span class="lineCov">          6 :   return &amp;(TypeIdHelper&lt;T&gt;::dummy_);</span></a>
 <a name="441"><span class="lineNum">     441 </span>            : }</a>
 <a name="442"><span class="lineNum">     442 </span>            : </a>
 <a name="443"><span class="lineNum">     443 </span>            : // Returns the type ID of ::testing::Test.  Always call this instead</a>
@@ -513,14 +513,14 @@
 <a name="451"><span class="lineNum">     451 </span>            : // of a Test object.</a>
 <a name="452"><span class="lineNum">     452 </span>            : class TestFactoryBase {</a>
 <a name="453"><span class="lineNum">     453 </span>            :  public:</a>
-<a name="454"><span class="lineNum">     454 </span><span class="lineCov">          4 :   virtual ~TestFactoryBase() {}</span></a>
+<a name="454"><span class="lineNum">     454 </span><span class="lineCov">          5 :   virtual ~TestFactoryBase() {}</span></a>
 <a name="455"><span class="lineNum">     455 </span>            : </a>
 <a name="456"><span class="lineNum">     456 </span>            :   // Creates a test instance to run. The instance is both created and destroyed</a>
 <a name="457"><span class="lineNum">     457 </span>            :   // within TestInfoImpl::Run()</a>
 <a name="458"><span class="lineNum">     458 </span>            :   virtual Test* CreateTest() = 0;</a>
 <a name="459"><span class="lineNum">     459 </span>            : </a>
 <a name="460"><span class="lineNum">     460 </span>            :  protected:</a>
-<a name="461"><span class="lineNum">     461 </span><span class="lineCov">          4 :   TestFactoryBase() {}</span></a>
+<a name="461"><span class="lineNum">     461 </span><span class="lineCov">          5 :   TestFactoryBase() {}</span></a>
 <a name="462"><span class="lineNum">     462 </span>            : </a>
 <a name="463"><span class="lineNum">     463 </span>            :  private:</a>
 <a name="464"><span class="lineNum">     464 </span>            :   GTEST_DISALLOW_COPY_AND_ASSIGN_(TestFactoryBase);</a>
@@ -531,7 +531,7 @@
 <a name="469"><span class="lineNum">     469 </span>            : template &lt;class TestClass&gt;</a>
 <a name="470"><span class="lineNum">     470 </span>            : class TestFactoryImpl : public TestFactoryBase {</a>
 <a name="471"><span class="lineNum">     471 </span>            :  public:</a>
-<a name="472"><span class="lineNum">     472 </span><span class="lineCov">          4 :   virtual Test* CreateTest() { return new TestClass; }</span></a>
+<a name="472"><span class="lineNum">     472 </span><span class="lineCov">          5 :   virtual Test* CreateTest() { return new TestClass; }</span></a>
 <a name="473"><span class="lineNum">     473 </span>            : };</a>
 <a name="474"><span class="lineNum">     474 </span>            : </a>
 <a name="475"><span class="lineNum">     475 </span>            : #if GTEST_OS_WINDOWS</a>
@@ -552,8 +552,8 @@
 <a name="490"><span class="lineNum">     490 </span>            : typedef void (*TearDownTestCaseFunc)();</a>
 <a name="491"><span class="lineNum">     491 </span>            : </a>
 <a name="492"><span class="lineNum">     492 </span>            : struct CodeLocation {</a>
-<a name="493"><span class="lineNum">     493 </span><span class="lineCov">          4 :   CodeLocation(const std::string&amp; a_file, int a_line)</span></a>
-<a name="494"><span class="lineNum">     494 </span><span class="lineCov">          4 :       : file(a_file), line(a_line) {}</span></a>
+<a name="493"><span class="lineNum">     493 </span><span class="lineCov">          5 :   CodeLocation(const std::string&amp; a_file, int a_line)</span></a>
+<a name="494"><span class="lineNum">     494 </span><span class="lineCov">          5 :       : file(a_file), line(a_line) {}</span></a>
 <a name="495"><span class="lineNum">     495 </span>            : </a>
 <a name="496"><span class="lineNum">     496 </span>            :   std::string file;</a>
 <a name="497"><span class="lineNum">     497 </span>            :   int line;</a>
