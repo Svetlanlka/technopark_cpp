@@ -1,11 +1,30 @@
+language: cpp
+
+addons:
+  apt:
+    update: true
+    packages:
+      - cppcheck
+      - valgrind
+      - cmake
+      - libgtest-dev
+      - lcov
+
+before_install:
+  - cd /usr/src/gtest
+  - sudo cmake CMakeLists.txt || (cat CMakeFiles/CMakeError.log && CMakeFiles/CMakeOutput.log)
+  - sudo make
+  - sudo cp *.a /usr/lib
+  - cd -
+
 script:
-  - sudo apt install gcovr
-  - sudo apt install valgrind
-  - sudo apt-get install python3-setuptools
-  - sudo apt install cppcheck
-  - sudo apt-get install lynx
-  - sudo apt install libgtest-dev
-  - cppcheck --suppress=missingIncludeSystem src/*.c
+#  - sudo apt install gcovr
+#  - sudo apt install valgrind
+#  - sudo apt-get install python3-setuptools
+#  - sudo apt install cppcheck
+#  - sudo apt-get install lynx
+#  - sudo apt install libgtest-dev
+  - cppcheck --suppress=missingIncludeSystem src/*.c include/testy/*.h
   - mkdir build
   - cd build
   - cmake .. && make
