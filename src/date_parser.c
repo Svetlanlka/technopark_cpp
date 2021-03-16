@@ -3,6 +3,18 @@
 
 #include "date_parser.h"
 
+struct Dates {
+    char **arr_dates; // массив правильных дат
+    int el_count; // колличество правильных дат
+    int colon_count; // текущее кол-во двоеточий
+    int count_sym; // текущее кол-во символов, пока не встретилось следующее двоеточие
+};
+
+int Date_str_parser(char ** str, size_t size, struct Dates *dates); // вызов в цикле Date_sym_parser для каждой строки с датой
+int Date_sym_parser(const char *str, struct Dates *dates); // Парсинг посимвольно каждой строки с датой
+char* Enter_new_data (FILE *file, int check);
+
+
 int Date_parser(const char *filename, int check) {
     if (!filename && check == 1) return ERROR_WITH_FILENAME;
 

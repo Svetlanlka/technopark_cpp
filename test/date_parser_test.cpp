@@ -2,7 +2,7 @@
 #include <string>
 
 extern "C" {
-   // #include "date_parser.c"
+   #include "../src/date_parser.c"
    #include "date_parser.h"
 }
 
