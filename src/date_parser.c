@@ -46,7 +46,7 @@ char *Enter_new_data (FILE *file, int check) {
         if (scanf("%1024s", chunk) != 1) {
             if (!chunk)
                 return NULL;
-            printf("%s", chunk);
+//            printf("%s", chunk);
             free(chunk);
             return NULL;
         }
