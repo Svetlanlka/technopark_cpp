@@ -6,6 +6,7 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_REQUIRED ON)
 set(CMAKE_C_FLAGS "-g -O0 -Wall -fprofile-arcs -ftest-coverage")
 set(CMAKE_CXX_FLAGS "-g -O0 -Wall -fprofile-arcs -ftest-coverage")
+set(DCMAKE_CXX_FLAGS "--coverage")
 set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 
 include_directories("${PROJECT_SOURCE_DIR}/include")
