@@ -50,5 +50,8 @@ TEST(Date_sym_parser_wrong_format, not_ok) {
 // тест на основную функцию Date_parser с массивом строк
  TEST(Date_parser, ok) {
     ASSERT_EQ(Date_parser("../test_cases/test1.txt", 1), 2);
+    ASSERT_EQ(Date_parser("../test_cases/test2.txt", 1), 0);
+    ASSERT_EQ(Date_parser("../test_cases/test3.txt", 1), 21);
+    ASSERT_EQ(Date_parser("../test_cases/test4.txt", 1), 3);
 }
 
