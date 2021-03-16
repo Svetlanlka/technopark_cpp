@@ -27,6 +27,4 @@ script:
   - lcov --remove coverage.info '/usr/*' "${HOME}"'/.cache/*' --output-file coverage.info
   - lcov --list coverage.info
   - make clean
-
-after_success:
   - then bash <(curl -s https://codecov.io/bash)
