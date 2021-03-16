@@ -9,6 +9,7 @@ set(CMAKE_CXX_FLAGS "-g -O0 -Wall -fprofile-arcs -ftest-coverage")
 set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 
 include_directories("${PROJECT_SOURCE_DIR}/include")
+#target_include_directories("${PROJECT_SOURCE_DIR}/src/date_parser.c")
 
 file(GLOB sources
         "${PROJECT_SOURCE_DIR}/include/*.h"

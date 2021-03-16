@@ -1,10 +1,9 @@
 #include "gtest/gtest.h"
-#include <fstream>
-#include <iostream>
 #include <string>
 
 extern "C" {
-    #include "date_parser.h"
+   // #include "date_parser.c"
+   #include "date_parser.h"
 }
 
 // Тестирование функции Date_sym_parser, которая как раз содержит всю логику программы
@@ -16,7 +15,7 @@ TEST(Date_sym_parser_success, ok) {
 }
 
 // исключение, присуствуют не корректные символы
-TEST(Date_sym_parser_fail, not_sym) {
+TEST(Date_sym_parser, not_sym) {
     struct Dates dates = { NULL, 0, 0, 0 };
     const char *str = "22:2-:s2";
     const char *str2 = "ssssssss";
@@ -26,7 +25,7 @@ TEST(Date_sym_parser_fail, not_sym) {
 }
 
 // исключение, не верные числа в дате
-TEST(Date_sym_parser_fail, wrong_number) {
+TEST(Date_sym_parser, wrong_number) {
     struct Dates dates = { NULL, 0, 0, 0 };
     const char *str = "25:33:33";
     const char *str2 = "22:60:50";
@@ -37,7 +36,7 @@ TEST(Date_sym_parser_fail, wrong_number) {
 }
 
 // исключение, неполный формат даты
-TEST(Date_sym_parser_fail, wrong_format) {
+TEST(Date_sym_parser, wrong_format) {
     struct Dates dates = { NULL, 0, 0, 0 };
     const char *str = "::";
     const char *str2 = "1::0";
@@ -48,7 +47,7 @@ TEST(Date_sym_parser_fail, wrong_format) {
 }
 
 // исключение, много двоеточий
-TEST(Date_sym_parser_fail, many_colon) {
+TEST(Date_sym_parser, many_colon) {
     struct Dates dates = { NULL, 0, 0, 0 };
     const char *str = "13:22:11:22";
     const char *str2 = "::::";
@@ -57,10 +56,24 @@ TEST(Date_sym_parser_fail, many_colon) {
 }
 
 // исключение, не хватает цифр
-TEST(Date_sym_parser_fail, no_number) {
+TEST(Date_sym_parser, no_number) {
     struct Dates dates = { NULL, 0, 0, 0 };
     const char *str = "11:11:";
     ASSERT_EQ(Date_sym_parser(str, &dates), -1);
+}
+
+// Передана NULL строка
+TEST(Date_sym_parser, null_str) {
+    struct Dates dates = { NULL, 0, 0, 0 };
+    const char *str = NULL;
+    ASSERT_EQ(Date_sym_parser(str, &dates), -1);
+}
+
+// передан NULL массив строк
+TEST(Date_str_parser, null_str) {
+    struct Dates dates = { NULL, 0, 0, 0 };
+    char **str = NULL;
+    ASSERT_EQ(Date_str_parser(str, SIZE, &dates), -1);
 }
 
 // тест на основную функцию Date_parser с массивом строк
@@ -75,12 +88,13 @@ TEST(Date_parser, file_not_open) {
     ASSERT_EQ(Date_parser("../unit_tests/test.txt", 1), -1);
 }
 
-//TEST(Enter_new_data, ok) {
-//    FILE *file = fopen("../unit_tests/test1.txt", "r");
-//    ASSERT_TRUE(Enter_new_data(file, 1));
-//}
-//
-//TEST(Enter_new_data, not_ok) {
-//    FILE *file = fopen("../unit_tests/test1.txt", "r");
-//    ASSERT_EQ(Enter_new_data(file, 1), NULL);
-//}
+// Передана NULL строка, как название файла
+TEST(Date_parser, null_str) {
+    ASSERT_EQ(Date_parser(NULL, 1), -1);
+}
+
+// передан NULL указатель
+TEST(Enter_new_data, ok) {
+    ASSERT_FALSE(Enter_new_data(NULL, 1));
+}
+

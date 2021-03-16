@@ -4,10 +4,12 @@
 #include "date_parser.h"
 
 int Date_parser(const char *filename, int check) {
+    if (!filename && check == 1) return -1;
+
     FILE *file = NULL;
     if (check == 1)
         file = fopen(filename, "r");
-    if (!file) return -1;
+    if (!file && check == 1) return -1;
 
     struct Dates dates = { NULL, 0, 0, 0 };
 
@@ -26,16 +28,18 @@ int Date_parser(const char *filename, int check) {
     }
     free(input_text);
 
-    for (size_t j = 0; j < dates.el_count; j++) {
+    for (int j = 0; j < dates.el_count; j++) {
         free(dates.arr_dates[j]);
     }
     free(dates.arr_dates);
-    if (check == 1) fclose(file);
 
+    if (check == 1) fclose(file);
     return count;
 }
 
 char *Enter_new_data (FILE *file, int check) {
+    if (check == 1 && !file) return NULL;
+
     char *chunk = (char *) malloc(sizeof(char) * SIZE); // при больших строках size увеличится
     if (check == 1) {
         if (fscanf(file, "%1024s", chunk) != 1) {
@@ -58,6 +62,8 @@ char *Enter_new_data (FILE *file, int check) {
 // ПАРСИНГ СТРОК: Парсинг переданнного массива, который вводим или берем из файла в main
 // (В цикле поочередно передаются все строки в функцию Date_sym_parser)
 int Date_str_parser(char **str, size_t size, struct Dates *dates) {
+    if (!str) return -1;
+
     for (size_t i = 0; i < size && str[i]; ++i) {
         char *date_str = (char *) malloc (sizeof(char) * SIZE * (size / SIZE + 1));
 
@@ -73,6 +79,8 @@ int Date_str_parser(char **str, size_t size, struct Dates *dates) {
 
 // Парсинг посимвольный
 int Date_sym_parser(const char *str, struct Dates *dates) {
+    if (!str) return -1;
+
     int cur_num = 0; // текущее значение (час 0-23/минута 0-59/секунда 0-59)
     dates->colon_count = 0;
     dates->count_sym = 0;
