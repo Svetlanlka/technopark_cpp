@@ -1,0 +1,23 @@
+из travis-ci.com:
+
+$ lcov --list coverage.info
+
+Reading tracefile coverage.info
+
+                                 |Lines       |Functions  |Branches    
+
+Filename                         |Rate     Num|Rate    Num|Rate     Num
+
+=======================================================================
+
+[/home/travis/build/Svetlanlka/technopark_cpp/]
+
+src/date_parser.c                |87.0%     69| 100%     3|    -      0
+
+test/date_parser_test.cpp        | 100%     29| 100%    22|    -      0
+
+test/main.cpp                    | 100%      4| 100%     3|    -      0
+
+=======================================================================
+
+                           Total:|91.2%    102| 100%    28|    -      0
