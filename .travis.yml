@@ -10,5 +10,9 @@ script:
   - cmake .. && make && ctest --verbose
   - valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ctest
   - ctest --output-on-failure
-  - make coverage
-  - lynx coverage/index.html
+  - ./tests_gtest
+  - lcov --directory . --capture --output-file coverage.info
+  - lcov --remove coverage.info '/usr/*' "${HOME}"'/.cache/*' --output-file coverage.info
+  - lcov --list coverage.info
+  - bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Codecov did not collect coverage reports"
+  - make clean

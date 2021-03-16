@@ -4,7 +4,7 @@
 #define LOG_MEMORY 0
 #define PARSER_LOG 1
 #define SIZE 1024
-#define INPUT_FILE "../test/test_cases/test4.txt"
+#define INPUT_FILE "../test_cases/test4.txt"
 //#define INPUT_FILE "test_file.txt"
 
 #include <stdlib.h>

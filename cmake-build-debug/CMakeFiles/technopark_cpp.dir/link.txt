@@ -1,1 +1,0 @@
-/usr/bin/cc  -g -fprofile-arcs -ftest-coverage -fprofile-abs-path -g   CMakeFiles/technopark_cpp.dir/src/date_parser.c.o CMakeFiles/technopark_cpp.dir/src/main.c.o  -o technopark_cpp  -lpthread 

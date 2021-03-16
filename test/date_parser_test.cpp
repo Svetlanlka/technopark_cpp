@@ -49,6 +49,14 @@ TEST(Date_sym_parser_wrong_format, not_ok) {
 
 // тест на основную функцию Date_parser с массивом строк
  TEST(Date_parser, ok) {
+    // std::cout << "TEST" << Date_parser("../test_file.txt", 1) << "\n";
+    ASSERT_EQ(Date_parser("../test_cases/test1.txt", 1), 2);
+    // std::fstream file("../test_cases/test1.txt", std::ios::in);
+
+    // if (file.is_open()) std::cout << "SUCCESS!!!!\n";
+    // else std::cout << "FILE NOT OPEN\n";
+    // ASSERT_TRUE(false);
+}
 //    std::fstream file("test_cases/test1.txt", std::ios::in);
 //
 //    if (file.is_open()) std::cout << "SUCCESS!!!!\n";
@@ -107,7 +115,6 @@ TEST(Date_sym_parser_wrong_format, not_ok) {
 //        std::cout << input_text[j] << " ";
 //    }
 
-    //ASSERT_EQ(Date_parser(INPUT_FILE, 1), 2);
 
 //    for (size_t j = 0; j < i; j++) {
 //        delete(input_text[j]);
@@ -119,5 +126,5 @@ TEST(Date_sym_parser_wrong_format, not_ok) {
 //    }
 //    delete dates.arr_dates;
 //    file.close();
-}
+//}
 
