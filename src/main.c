@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "testy/date_parser.h"
+#include "date_parser.h"
 
 /*Вариант #69
 Составить программу построчной фильтрации текста, вводимого пользователем.

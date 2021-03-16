@@ -4,19 +4,19 @@
 #include <string>
 
 extern "C" {
-    #include "testy/date_parser.h"
+    #include "date_parser.h"
 }
 
 // Тестирование функции Date_sym_parser, которая как раз содержит всю логику программы
 // правильная работа программы
-TEST(Date_sym_parser, ok) {
+TEST(Date_sym_parser_success, ok) {
     struct Dates dates = { NULL, 0, 0, 0 };
     const char *str = "22:22:22";
     ASSERT_EQ(Date_sym_parser(str, &dates), 0);
 }
 
 // исключение, присуствуют не корректные символы
-TEST(Date_sym_parser_not_sym, not_ok) {
+TEST(Date_sym_parser_fail, not_sym) {
     struct Dates dates = { NULL, 0, 0, 0 };
     const char *str = "22:2-:s2";
     const char *str2 = "ssssssss";
@@ -26,7 +26,7 @@ TEST(Date_sym_parser_not_sym, not_ok) {
 }
 
 // исключение, не верные числа в дате
-TEST(Date_sym_parser_wrong_number, not_ok) {
+TEST(Date_sym_parser_fail, wrong_number) {
     struct Dates dates = { NULL, 0, 0, 0 };
     const char *str = "25:33:33";
     const char *str2 = "22:60:50";
@@ -37,7 +37,7 @@ TEST(Date_sym_parser_wrong_number, not_ok) {
 }
 
 // исключение, неполный формат даты
-TEST(Date_sym_parser_wrong_format, not_ok) {
+TEST(Date_sym_parser_fail, wrong_format) {
     struct Dates dates = { NULL, 0, 0, 0 };
     const char *str = "::";
     const char *str2 = "1::0";
@@ -49,9 +49,13 @@ TEST(Date_sym_parser_wrong_format, not_ok) {
 
 // тест на основную функцию Date_parser с массивом строк
  TEST(Date_parser, ok) {
-    ASSERT_EQ(Date_parser("../test_cases/test1.txt", 1), 2);
-    ASSERT_EQ(Date_parser("../test_cases/test2.txt", 1), 0);
-    ASSERT_EQ(Date_parser("../test_cases/test3.txt", 1), 21);
-    ASSERT_EQ(Date_parser("../test_cases/test4.txt", 1), 3);
+    ASSERT_EQ(Date_parser("../unit_tests/test1.txt", 1), 2);
+    ASSERT_EQ(Date_parser("../unit_tests/test2.txt", 1), 0);
+    ASSERT_EQ(Date_parser("../unit_tests/test3.txt", 1), 21);
+    ASSERT_EQ(Date_parser("../unit_tests/test4.txt", 1), 3);
+}
+
+TEST(Date_parser, file_not_open) {
+    ASSERT_EQ(Date_parser("../unit_tests/test.txt", 1), -1);
 }
 
