@@ -20,7 +20,7 @@ int main() {
 
     if (scanf("%d", &check) != 1) {
     	printf("input error\n");
-    	return -1;
+    	return INPUT_ERROR;
     }
 
     printf("COUNT OF CORRECT DATE: %d\n", Date_parser(INPUT_FILE, check));

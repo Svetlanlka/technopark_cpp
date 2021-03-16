@@ -4,12 +4,12 @@
 #include "date_parser.h"
 
 int Date_parser(const char *filename, int check) {
-    if (!filename && check == 1) return -1;
+    if (!filename && check == 1) return ERROR_WITH_FILENAME;
 
     FILE *file = NULL;
     if (check == 1)
         file = fopen(filename, "r");
-    if (!file && check == 1) return -1;
+    if (!file && check == 1) return ERROR_WITH_FILENAME;
 
     struct Dates dates = { NULL, 0, 0, 0 };
 
@@ -62,12 +62,12 @@ char *Enter_new_data (FILE *file, int check) {
 // ПАРСИНГ СТРОК: Парсинг переданнного массива, который вводим или берем из файла в main
 // (В цикле поочередно передаются все строки в функцию Date_sym_parser)
 int Date_str_parser(char **str, size_t size, struct Dates *dates) {
-    if (!str) return -1;
+    if (!str || !dates) return ERROR_STR_POINTER;
 
     for (size_t i = 0; i < size && str[i]; ++i) {
         char *date_str = (char *) malloc (sizeof(char) * SIZE * (size / SIZE + 1));
 
-        if (Date_sym_parser(str[i], dates) != -1) {
+        if (Date_sym_parser(str[i], dates) != WRONG_DATE_FORMAT) {
             dates->arr_dates[dates->el_count++] = date_str;
         } else {
             free(date_str);
@@ -79,7 +79,7 @@ int Date_str_parser(char **str, size_t size, struct Dates *dates) {
 
 // Парсинг посимвольный
 int Date_sym_parser(const char *str, struct Dates *dates) {
-    if (!str) return -1;
+    if (!str || !dates) return ERROR_STR_POINTER;
 
     int cur_num = 0; // текущее значение (час 0-23/минута 0-59/секунда 0-59)
     dates->colon_count = 0;
@@ -90,24 +90,24 @@ int Date_sym_parser(const char *str, struct Dates *dates) {
             cur_num = cur_num * 10 + (str[i] - '0');
 
             if (++dates->count_sym > 2)
-                return -1;
+                return WRONG_DATE_FORMAT;
             if ((dates->colon_count == 0 && cur_num > LIMIT_HOURS_OF_DAY) || (dates->colon_count != 0 && cur_num > TIME_LIMIT))
-                return -1;
+                return WRONG_DATE_FORMAT;
         } else if (str[i] == ':') {
             cur_num = 0;
             if (dates->count_sym != 2)
-                return -1;
+                return WRONG_DATE_FORMAT;
             dates->count_sym = 0;
             if (++dates->colon_count > 2)
-                return -1;
+                return WRONG_DATE_FORMAT;
         } else {
-            return -1;
+            return WRONG_DATE_FORMAT;
         }
     }
 
     if (dates->colon_count != 2)
-        return -1;
+        return WRONG_DATE_FORMAT;
     if (dates->count_sym == 0)
-        return -1;
+        return WRONG_DATE_FORMAT;
     return 0;
 }
