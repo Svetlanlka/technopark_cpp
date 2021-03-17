@@ -12,24 +12,66 @@ TEST(date_filter, ok) {
     char ** input_str2 = read_data_from_file("../unit_tests/test2.txt");
     char ** input_str3 = read_data_from_file("../unit_tests/test3.txt");
     char ** input_str4 = read_data_from_file("../unit_tests/test4.txt");
-    date_filter((const char **) input_str, &count);
+    char ** filter_str = date_filter((const char **) input_str, &count);
     EXPECT_EQ(count, 2);
-    date_filter((const char **) input_str2, &count);
+    for (int i = 0; input_str[i]; i++) {
+        free(input_str[i]);
+    }
+    free(input_str);
+    for (int i = 0; i < count; i++) {
+        free(filter_str[i]);
+    }
+    free(filter_str);
+
+    char **filter_str2 = date_filter((const char **) input_str2, &count);
     EXPECT_EQ(count, 0);
-    date_filter((const char **) input_str3, &count);
+    for (int i = 0; input_str2[i]; i++) {
+        free(input_str2[i]);
+    }
+    free(input_str2);
+    for (int i = 0; i < count; i++) {
+        free(filter_str2[i]);
+    }
+    free(filter_str2);
+
+    char ** filter_str3 = date_filter((const char **) input_str3, &count);
     EXPECT_EQ(count, 21);
-    date_filter((const char **) input_str4, &count);
+    for (int i = 0; input_str3[i]; i++) {
+        free(input_str3[i]);
+    }
+    free(input_str3);
+    for (int i = 0; i < count; i++) {
+        free(filter_str3[i]);
+    }
+    free(filter_str3);
+
+    char **filter_str4 = date_filter((const char **) input_str4, &count);
     ASSERT_EQ(count, 3);
+    for (int i = 0; input_str4[i]; i++) {
+        free(input_str4[i]);
+    }
+    free(input_str4);
+    for (int i = 0; i < count; i++) {
+        free(filter_str4[i]);
+    }
+    free(filter_str4);
 }
 
 // ok
 TEST(read_data_from_file, ok) {
-    ASSERT_TRUE(read_data_from_file("../unit_tests/test1.txt"));
+    char ** input_str = read_data_from_file("../unit_tests/test1.txt");
+    EXPECT_TRUE(input_str);
+
+    for (int i = 0; input_str[i]; i++) {
+        free(input_str[i]);
+    }
+    free(input_str);
 }
 
 // файл не открылся
 TEST(read_data_from_file, file_not_open) {
-    ASSERT_FALSE(read_data_from_file("../unit_tests/wrong.txt"));
+    char ** input_str = read_data_from_file("../unit_tests/wrong.txt");
+    EXPECT_FALSE(input_str);
 }
 
 // имя файла - NULL
