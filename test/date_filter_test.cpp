@@ -34,11 +34,11 @@ TEST(read_data_from_file, file_not_open) {
 
 // имя файла - NULL
 TEST(read_data_from_file, wrong_filename) {
-    ASSERT_FALSE(read_data_from_file(nullptr));
+    ASSERT_FALSE(read_data_from_file(NULL));
 }
 
 TEST(print_correct_dates, wrong_filename) {
-    ASSERT_FALSE(read_data_from_file(nullptr));
+    ASSERT_FALSE(read_data_from_file(NULL));
 }
 
 //// Тестирование функции Date_sym_parser, которая как раз содержит всю логику программы
