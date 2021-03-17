@@ -22,8 +22,10 @@ char** read_data_from_file(const char *filename) {
     if (!file) return NULL;
 
     char **input_text = (char **) malloc(sizeof(char*) * SIZE);
-    if (!input_text)
+    if (!input_text) {
+        fclose(file);
         return NULL;
+    }
 
     size_t i = 0;
     while ((input_text[i] =  enter_new_data(file, 1)) != NULL) i++;

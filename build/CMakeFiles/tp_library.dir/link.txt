@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtp_library.a  CMakeFiles/tp_library.dir/src/date_filter.c.o CMakeFiles/tp_library.dir/src/main.c.o
+/usr/bin/ranlib libtp_library.a

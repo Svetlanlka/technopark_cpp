@@ -9,22 +9,17 @@ extern "C" {
 TEST(date_filter, ok) {
     int count = 0;
     char ** input_str = read_data_from_file("../unit_tests/test1.txt");
+    char ** input_str2 = read_data_from_file("../unit_tests/test2.txt");
+    char ** input_str3 = read_data_from_file("../unit_tests/test3.txt");
+    char ** input_str4 = read_data_from_file("../unit_tests/test4.txt");
     date_filter((const char **) input_str, &count);
     EXPECT_EQ(count, 2);
-
-//    int count2 = 0;
-//    char ** input_str2 = read_data_from_file("../unit_tests/test2.txt");
-// char ** input_str3 = read_data_from_file("../unit_tests/test3.txt");
-// char ** input_str4 = read_data_from_file("../unit_tests/test4.txt");
-//    date_filter((const char **) input_str2, &count2);
-//    EXPECT_EQ(count2, 0);
-//    count = 0;
-//    date_filter((const char **) input_str3, &count);
-//    EXPECT_EQ(count, 21);
-//    count = 0;
-//    date_filter((const char **) input_str4, &count);
-//    ASSERT_EQ(count, 3);
-
+    date_filter((const char **) input_str2, &count);
+    EXPECT_EQ(count, 0);
+    date_filter((const char **) input_str3, &count);
+    EXPECT_EQ(count, 21);
+    date_filter((const char **) input_str4, &count);
+    ASSERT_EQ(count, 3);
 }
 
 // ok
