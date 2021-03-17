@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/date_filter.h
+stdlib.h
+-
+stdio.h
+-
+stddef.h
+-
+string.h
+../include/string.h
+
+/home/svetlana/tp/technopark_cpp/src/main.c
+stdlib.h
+-
+stdio.h
+-
+date_filter.h
+/home/svetlana/tp/technopark_cpp/src/date_filter.h
+
