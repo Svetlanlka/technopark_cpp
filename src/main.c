@@ -30,13 +30,11 @@ int main(int argc, char *argv[]) {
     // чистка памяти
     for (size_t i = 0; input_str[i]; i++) {
       free(input_str[i]);
-      printf("FREE input_str_i\n");
     }
     free(input_str);
 
     for (int i = 0; i < count; i++) {
       free(filter_str[i]);
-        printf("FREE filter_str_i\n");
     }
     free(filter_str);
 

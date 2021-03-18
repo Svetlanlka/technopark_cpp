@@ -15,9 +15,9 @@
 #include <stddef.h>
 #include "string.h"
 
-char** date_filter(const char **str, int *count);
-char** input_data();
 char** read_data_from_file(const char *filename);
-void print_correct_dates(const char **str, int count);
+char** input_data();
+char** date_filter(const char **str, int *count);
+int print_correct_dates(const char **str, int count);
 
 #endif  // TECHNOPARK_CPP_INCLUDE_DATE_FILTER_H_

@@ -61,10 +61,10 @@ char** date_filter(const char **str, int *count) {
 
     return dates.arr_dates;
 }
-void print_correct_dates(const char ** str, int count) {
+int print_correct_dates(const char ** str, int count) {
     if (!str) {
         printf("NO CORRECT DATES\n");
-        return;
+        return ERROR_STR_POINTER;
     }
 
     printf("CORRECT DATES:\n");
@@ -73,14 +73,14 @@ void print_correct_dates(const char ** str, int count) {
         printf("%s\n", str[i]);
         i++;
     }
-    printf("COUNT OF CORRECT DATES: %d\n", count);
+    printf("COUNT OF CORRECT DATES: %zu\n", i);
+    return 0;
 }
 
 char *enter_new_data (FILE *file, int check) {
     if (check == 1 && !file) return NULL;
 
     char *chunk = (char *) malloc(sizeof(char) * SIZE); // при больших строках size увеличится
-    printf("malloc input_i (chunk)\n");
 
     if (!chunk)
         return NULL;
@@ -110,10 +110,8 @@ int date_str_filter(const char **str, struct Dates *dates) {
             dates->arr_dates[dates->el_count] = (char *) malloc (sizeof(char) * SIZE);
             if (!dates->arr_dates[dates->el_count])
                 return MEMORY_ALLOCATION_ERROR;
-            printf("malloc add_dates_i\n");
-            strcpy(dates->arr_dates[dates->el_count], str[i]);
-            printf("[%s]\n", dates->arr_dates[dates->el_count]);
-            dates->el_count++;
+
+            strcpy(dates->arr_dates[dates->el_count++], str[i]);
          }
     }
 
