@@ -1,6 +1,0 @@
-/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/tp_library.dir
-/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/technopark_cpp.dir
-/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/tests.dir
-/home/svetlana/tp/technopark_cpp/cmake-build-debug/CMakeFiles/test.dir
