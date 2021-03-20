@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtp_library.a  CMakeFiles/tp_library.dir/src/main.c.o CMakeFiles/tp_library.dir/src/search_files.c.o
+/usr/bin/ranlib libtp_library.a
