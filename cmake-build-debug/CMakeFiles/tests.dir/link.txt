@@ -1,1 +1,0 @@
-/usr/bin/c++  -g -O0 -Wall -fprofile-arcs -ftest-coverage -g   CMakeFiles/tests.dir/test/main.o CMakeFiles/tests.dir/test/search_files.o  -o tests  -fprofile-arcs /usr/local/lib/libgtest.a -lpthread libtp_library.a 
