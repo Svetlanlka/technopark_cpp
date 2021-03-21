@@ -3,19 +3,26 @@
 
 #include "search_files.h"
 
+// Пример ввода: ./technopark_cpp "../testing_directory" cpp
+// То есть: exe-шник директория запрос
 
 int main(int argc, char *argv[]) {
-    if (argc > 2) return INPUT_ERROR;
+    if (argc > 3) return INPUT_ERROR;
 
     printf("Ocheretnaya Svetlana. APO-13\nEnter query to search: ");
 
-    char query[SIZE];
     size_t i = 0;
-    while((query[i] = getchar()) != '\0' && query[i] != '\n') i++;
-    query[i] = '\0';
+    char *query = NULL;
+    if (argc == 3) {
+        query = argv[2];
+        i = strlen(argv[2]);
+    } else {
+        query = malloc(sizeof(char) * SIZE);
+        while((query[i] = getchar()) != '\0' && query[i] != '\n') i++;
+        query[i] = '\0';
+    }
 
     struct File_search search_data  = {query, i};
-
     if (SEARCH_LOG) printf("query: %s, size of query: %zu\n", search_data.query, search_data.query_size);
 
     char **arr_of_files = malloc (sizeof(char *) * FILES_COUNT);
@@ -25,12 +32,15 @@ int main(int argc, char *argv[]) {
 //        printf("file[%zu]: %s\n", j, arr_of_files[j]);
 
     struct File_info * sorted_files = sorting_files(arr_of_files, &files_count, &search_data);
-    printf("TOP %d files:\n", TOP_SIZE);
+    printf("\nTOP %d files:\n", TOP_SIZE);
     print_top_of_files(sorted_files, TOP_SIZE);
 
+    // освобождение памяти
     for (size_t j = 0; j < files_count; ++j)
         free(arr_of_files[j]);
     free(arr_of_files);
+    free(sorted_files);
+    if (argc != 3) free(query);
 
     return 0;
 }

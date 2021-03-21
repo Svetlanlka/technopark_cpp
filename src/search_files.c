@@ -8,8 +8,10 @@ int read_directory(const char *dir_name, char **arr_of_files, int *files_count) 
     if (SEARCH_LOG) printf("read directory: %s\n", dir_name);
     if (!dir_name) return INPUT_ERROR;
     DIR *dir = opendir(dir_name);
-    if (!dir)
+    if (!dir) {
+        closedir(dir);
         return INPUT_ERROR;
+    }
     struct dirent *entry;
 
     while ((entry = readdir(dir)) != NULL) {
@@ -22,8 +24,10 @@ int read_directory(const char *dir_name, char **arr_of_files, int *files_count) 
             strcat(cur_dir_name, "/");
             strcat(cur_dir_name, entry->d_name);
             if (SEARCH_LOG) printf("search_data->dir_name: %s entry->dir_name: %s\n",dir_name, entry->d_name);
-            if (opendir(cur_dir_name)) {
+            DIR *tmp_dir = opendir(cur_dir_name);
+            if (tmp_dir) {
                 read_directory(cur_dir_name, arr_of_files, files_count);
+                closedir(tmp_dir);
             } else {
                 arr_of_files[*files_count] = malloc (sizeof(char *) * SIZE);
                 strcpy(arr_of_files[*files_count], cur_dir_name);
@@ -105,5 +109,6 @@ int search_in_file (const char * filepath, struct File_search * search_data) {
         if (!strcmp(input_text, search_data->query)) count++;
     }
 
+    fclose(file);
     return count;
 }
