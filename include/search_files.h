@@ -9,8 +9,8 @@
 #define NULL_POINTER_ERROR -2
 #define OPEN_FILE_ERROR -3
 #define INPUT_ERROR -4
-#define SEARCH_LOG 0
-#define PARALLEL_SEARCH_LOG 0
+#define SEARCH_LOG 1
+#define PARALLEL_SEARCH_LOG 1
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -19,6 +19,7 @@
 #include "dirent.h"
 #include <pthread.h>
 #include <time.h>
+#include "unistd.h"
 
 struct File_info {
     char *filepath;
