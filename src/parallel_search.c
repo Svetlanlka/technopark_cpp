@@ -11,12 +11,12 @@ struct Parallel_search_data {
     int count_files;
 };
 
-struct Parallel_sorting_data {
+/*struct Parallel_sorting_data {
     int new_count;
     int cur_number;
     char **arr_of_files;
     struct File_info * sorted_files;
-};
+};*/
 
 void * parallel_search_in_file (void * data) {
     struct Parallel_search_data search_data = *(struct Parallel_search_data *) data;
