@@ -21,7 +21,7 @@ install:
   - pip install codecov
 
 script:
-  - cppcheck --error-exitcode=1 --suppress=missingIncludeSystem src/*.c include/*.h
+ # - cppcheck --error-exitcode=1 --suppress=missingIncludeSystem src/*.c include/*.h
   - mkdir build
   - cd build
   - cmake .. && make

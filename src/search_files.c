@@ -67,6 +67,8 @@ int print_top_of_files(struct File_info *sorted_files, int count_files) {
 }
 
 int insert_new_filepath (struct File_info * sorted_files, int new_count, char **arr_of_files, int cur_number) {
+    if (!arr_of_files) return NULL_POINTER_ERROR;
+
     size_t j = 0;
     for (; j < cur_number; ++j) {
         if (new_count > sorted_files[j].count /*|| j == cur_number*/) {

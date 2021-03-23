@@ -1,10 +1,10 @@
-#ifndef TECHNOPARK_CPP_INCLUDE_DATE_FILTER_H_
-#define TECHNOPARK_CPP_INCLUDE_DATE_FILTER_H_
+#ifndef TECHNOPARK_CPP_INCLUDE_SEARCH_FILES_H_
+#define TECHNOPARK_CPP_INCLUDE_SEARCH_FILES_H_
 
 #define SIZE 256
 #define TOP_SIZE 5
 #define FILES_COUNT 500
-#define COUNT_CPU 8
+#define COUNT_CPU 4
 #define PROGRAM_ERROR -1
 #define NULL_POINTER_ERROR -2
 #define OPEN_FILE_ERROR -3
@@ -40,4 +40,4 @@ int insert_new_filepath (struct File_info * sorted_files, int new_count, char **
 
 struct File_info * parallel_sorting_files(char **arr_of_files, int * count_files, struct File_search * search_data);
 
-#endif  // TECHNOPARK_CPP_INCLUDE_DATE_FILTER_H_
+#endif  // TECHNOPARK_CPP_INCLUDE_SEARCH_FILES_H_
