@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <pthread.h>
 
-#include "search_files.h"
+#include <search_files.h>
 
 // Пример ввода: ./technopark_cpp "../testing_directory" cpp
 // То есть: exe-шник директория запрос
@@ -20,18 +20,21 @@ int main(int argc, char *argv[]) {
         i = strlen(argv[2]);
     } else {
         query = malloc(sizeof(char) * SIZE);
+        if (!query) return MEMORY_ERROR;
+
         while((query[i] = getchar()) != '\0' && query[i] != '\n') i++;
         query[i] = '\0';
     }
 
     struct File_search search_data  = {query, i};
-    if (SEARCH_LOG) printf("query: %s, size of query: %zu\n", search_data.query, search_data.query_size);
+    if (MAIN_LOG) printf("query: %s, size of query: %zu\n", search_data.query, search_data.query_size);
     char **arr_of_files = malloc (sizeof(char *) * FILES_COUNT);
+    if (!arr_of_files) return MEMORY_ERROR;
     int files_count = 0;
 
     if (read_directory(argv[1], arr_of_files, &files_count) != 0) return PROGRAM_ERROR;
 
-    if (SEARCH_LOG) {
+    if (MAIN_LOG) {
         for (size_t j = 0; j < files_count; j++)
             printf("file[%zu]: %s\n", j, arr_of_files[j]);
     }
@@ -51,11 +54,11 @@ int main(int argc, char *argv[]) {
     if (files_count) print_top_of_files(sorted_files, files_count < TOP_SIZE ? files_count : TOP_SIZE);
 
     // освобождение памяти
-    for (size_t j = 0; j < files_count; ++j)
-        free(arr_of_files[j]);
+    free_arr(arr_of_files, files_count);
     free(arr_of_files);
     free(sorted_files);
     if (argc < 3) free(query);
 
-   return 0;
+    pthread_exit(NULL);
+    return 0;
 }

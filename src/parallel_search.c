@@ -1,4 +1,7 @@
-#include "search_files.h"
+#include <search_files.h>
+#include <my_library_search_files.h>
+
+void * parallel_search_in_file (void * data);
 
 struct Parallel_search_data {
     char ** arr_of_files;
@@ -8,34 +11,28 @@ struct Parallel_search_data {
 };
 
 void * parallel_search_in_file (void * data) {
-    struct Parallel_search_data search_data = *(struct Parallel_search_data *) data;
+    if (!data) return NULL;
 
+    struct Parallel_search_data search_data = *(struct Parallel_search_data *) data;
     int * result = (int *) malloc (sizeof(int) * COUNT_CPU);
+    if (!result) return NULL;
+
     for (int j = 0; j < search_data.count_files; ++j) {
         result[j] = search_in_file(search_data.arr_of_files[search_data.part_number + j], search_data.search_data);
     }
 
-    if (PARALLEL_SEARCH_LOG)
-        for (int j = 0; j < search_data.count_files; ++j) {
-            printf("parallel search result: %d, flag: %d\n", result[j], search_data.part_number);
-        }
-
-//    for (int i = 0; i < 10; ++i) {
-//        printf("THREAD #%d\n", search_data.flag);
-//    }
     pthread_exit ((void *) result);
-    // return ((void *) result);
 }
 
 struct File_info * parallel_sorting_files(char **arr_of_files, int * count_files, struct File_search * search_data) {
-    if (SEARCH_LOG) printf("Parallel search and sorting files\n");
+    if (!arr_of_files || !search_data || !count_files) return NULL;
+
     struct File_info * sorted_files = malloc(sizeof(struct File_info)* (*count_files));
+    if (!sorted_files) return NULL;
 
     int thread_count = *count_files % COUNT_CPU == 0 ? *count_files / COUNT_CPU : *count_files / COUNT_CPU + 1;
     pthread_t thread[thread_count];
     struct Parallel_search_data data[thread_count];
-    // data = malloc ((sizeof(struct Parallel_search_data)));
-    int result;
     void *status[thread_count];
     int count_if_last_part = *count_files - (thread_count - 1) * COUNT_CPU;
 
@@ -45,29 +42,17 @@ struct File_info * parallel_sorting_files(char **arr_of_files, int * count_files
         data[i].part_number = i;
         data[i].count_files = i == thread_count - 1 ? count_if_last_part : COUNT_CPU;
 
-        result = pthread_create(&thread[i], NULL, parallel_search_in_file, &data[i]);
-
-        if (result != 0) {
-            printf("Error with create thread\n");
+        if (pthread_create(&thread[i], NULL, parallel_search_in_file, &data[i]) != 0) {
             return NULL;
         }
-        // printf("\nPthread arr TIME: %ld\ncount_files = %d, part_number = %d\n", end2 - start, data[i].count_files, data[i].part_number);
     }
 
     for (size_t i = 0; i < thread_count; ++i) {
-        if (PARALLEL_SEARCH_LOG) printf("JOIN #%zu\n", i);
-        result = pthread_join(thread[i], &status[i]);
-
-        if (result != 0) {
-            printf("Error with join thread\n");
+        if (pthread_join(thread[i], &status[i]) != 0) {
             return NULL;
         } else {
             int * new_count = (int*)status[i];
             int count_part = i == thread_count - 1 ? count_if_last_part : COUNT_CPU;
-            if (PARALLEL_SEARCH_LOG)
-                for (int j = 0; j < count_part; ++j) {
-                    printf("\nSearch in file[%zu]: %s\nCOUNT: %d\n", i * COUNT_CPU + j, arr_of_files[i * COUNT_CPU + j], new_count[j]);
-                }
 
             // заполнение массива в отсортированном виде
             for (int j = 0; j < count_part; ++j) {
@@ -79,6 +64,6 @@ struct File_info * parallel_sorting_files(char **arr_of_files, int * count_files
     for (int i = 0; i < thread_count; ++i) {
         free(status[i]);
     }
+
     return sorted_files;
 }
-
