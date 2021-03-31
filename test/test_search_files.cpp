@@ -8,13 +8,13 @@ extern "C" {
 
 TEST(sorting_files, ok) {
     const char *query = "cpp";
-    struct File_search search_data  = {(char *)query, 3};
+    file_search search_data  = {(char *)query, 3};
     char **arr_of_files = new char * [FILES_COUNT];
     int files_count = 0;
 
     read_directory("../testing_directory3", arr_of_files, &files_count);
 
-    struct File_info *sorted_files = sorting_files(arr_of_files, &files_count, &search_data);
+    file_info *sorted_files = sorting_files(arr_of_files, &files_count, &search_data);
 
     for (int j = 0; j < files_count; j++) {
         printf("file[%d]: %s, count: %d\n", j, sorted_files[j].filepath, sorted_files[j].count);
@@ -39,7 +39,7 @@ TEST(sorting_files, null_arr_ptr) {
     char **arr_of_files = NULL;
     int files_count = 0;
     const char *query = "word";
-    struct File_search search_data  = {(char *)query, 4};
+    file_search search_data  = {(char *)query, 4};
     EXPECT_FALSE(sorting_files(arr_of_files, &files_count, &search_data));
     ASSERT_FALSE(parallel_sorting_files(arr_of_files, &files_count, &search_data));
 }
@@ -47,8 +47,8 @@ TEST(sorting_files, null_arr_ptr) {
 TEST(sorting_files, null_count_ptr) {
     char **arr_of_files = new char * [FILES_COUNT];
     const char *query = "word";
-    struct File_search search_data  = {(char *)query, 4};
-    struct File_info *sorted_files = sorting_files(arr_of_files, NULL, &search_data);
+    file_search search_data  = {(char *)query, 4};
+    file_info *sorted_files = sorting_files(arr_of_files, NULL, &search_data);
     EXPECT_FALSE(sorted_files);
     ASSERT_FALSE(parallel_sorting_files(arr_of_files, NULL, &search_data));
 
@@ -58,7 +58,7 @@ TEST(sorting_files, null_count_ptr) {
 TEST(sorting_files, null_search_ptr) {
     char **arr_of_files = new char * [FILES_COUNT];
     int files_count = 0;
-    struct File_info *sorted_files = sorting_files(arr_of_files, &files_count, NULL);
+    file_info *sorted_files = sorting_files(arr_of_files, &files_count, NULL);
     EXPECT_FALSE(sorted_files);
     ASSERT_FALSE(parallel_sorting_files(arr_of_files, &files_count, NULL));
 
@@ -69,7 +69,7 @@ TEST(sorting_files, null_search_ptr) {
 
 TEST(sorting_files, file_not_open) {
     const char *query = "cpp";
-    struct File_search search_data  = {(char *)query, 3};
+    file_search search_data  = {(char *)query, 3};
     int files_count = 2;
     char **arr_of_files = new char * [files_count];
 
@@ -78,7 +78,7 @@ TEST(sorting_files, file_not_open) {
     strcpy(arr_of_files[0], "../testing_directory3/afile.txt");
     strcpy(arr_of_files[1], "../testing_directory3/wrong.txt");
 
-    struct File_info *sorted_files = sorting_files(arr_of_files, &files_count, &search_data);
+    file_info *sorted_files = sorting_files(arr_of_files, &files_count, &search_data);
     ASSERT_FALSE(sorted_files);
 
     delete [] arr_of_files[0];
@@ -142,11 +142,11 @@ TEST(read_directory, null_count) {
 
 TEST(print_top_of_files, ok) {
     const char *query = "cpp";
-    struct File_search search_data  = {(char *)query, 3};
+    file_search search_data  = {(char *)query, 3};
     char **arr_of_files = new char * [FILES_COUNT];
     int files_count = 0;
     read_directory("../testing_directory3", arr_of_files, &files_count);
-    struct File_info *sorted_files = sorting_files(arr_of_files, &files_count, &search_data);
+    file_info *sorted_files = sorting_files(arr_of_files, &files_count, &search_data);
     ASSERT_EQ(print_top_of_files(sorted_files, TOP_SIZE), 0);
 
     free_arr(arr_of_files, files_count);
@@ -160,12 +160,12 @@ TEST(print_top_of_files, null_ptr) {
 
 TEST(parallel_sorting_files, ok) {
     const char *query = "cpp";
-    struct File_search search_data  = {(char *)query, 3};
+    file_search search_data  = {(char *)query, 3};
     char **arr_of_files = new char * [FILES_COUNT];
     int files_count = 0;
 
     read_directory("../testing_directory3", arr_of_files, &files_count);
-    struct File_info *sorted_files = parallel_sorting_files(arr_of_files, &files_count, &search_data);
+    file_info *sorted_files = parallel_sorting_files(arr_of_files, &files_count, &search_data);
 
     EXPECT_STREQ(sorted_files[0].filepath, "../testing_directory3/bfile.txt");
     EXPECT_EQ(sorted_files[0].count, 100);
@@ -179,4 +179,4 @@ TEST(parallel_sorting_files, ok) {
     delete [] arr_of_files;
 }
 
-// struct File_info * sorting_files(char **arr_of_files, int * count_files, struct File_search * search_data)
+// file_info * sorting_files(char **arr_of_files, int * count_files, file_search * search_data)

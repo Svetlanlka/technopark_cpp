@@ -1,13 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include <search_files.h>
-#include <my_library_search_files.h>
+#include "search_files.h"
+#include "my_library_search_files.h"
 
-struct File_info * sorting_files(char **arr_of_files, int * count_files, struct File_search * search_data) {
+file_info * sorting_files(char **arr_of_files, int * count_files, file_search * search_data) {
     if (!arr_of_files || !search_data || !count_files) return NULL;
 
-    struct File_info * sorted_files = malloc(sizeof(struct File_info)* (*count_files));
+    file_info * sorted_files = malloc(sizeof(file_info)* (*count_files));
     if (!sorted_files) return NULL;
 
     for (size_t i = 0; i < *count_files; ++i) {
@@ -25,7 +25,7 @@ struct File_info * sorting_files(char **arr_of_files, int * count_files, struct 
     return sorted_files;
 }
 
-int insert_new_filepath (struct File_info * sorted_files, int new_count, char **arr_of_files, int cur_number) {
+int insert_new_filepath (file_info * sorted_files, int new_count, char **arr_of_files, int cur_number) {
     if (!arr_of_files || !sorted_files) return NULL_POINTER_ERROR;
 
     size_t j = 0;
@@ -47,7 +47,7 @@ int insert_new_filepath (struct File_info * sorted_files, int new_count, char **
     return 0;
 }
 
-int search_in_file (const char * filepath, struct File_search * search_data) {
+int search_in_file (const char * filepath, file_search * search_data) {
     if (!filepath || !search_data) return NULL_POINTER_ERROR;
 
     FILE *file = NULL;

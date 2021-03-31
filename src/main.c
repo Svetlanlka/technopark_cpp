@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <pthread.h>
 
-#include <search_files.h>
+#include "search_files.h"
 
 // Пример ввода: ./technopark_cpp "../testing_directory" cpp
 // То есть: exe-шник директория запрос
@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
         query[i] = '\0';
     }
 
-    struct File_search search_data  = {query, i};
+    file_search search_data  = {query, i};
     if (MAIN_LOG) printf("query: %s, size of query: %zu\n", search_data.query, search_data.query_size);
     char **arr_of_files = malloc (sizeof(char *) * FILES_COUNT);
     if (!arr_of_files) return MEMORY_ERROR;
@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
             printf("file[%zu]: %s\n", j, arr_of_files[j]);
     }
 
-    struct File_info *sorted_files = NULL;
+    file_info *sorted_files = NULL;
     clock_t start = clock();
     if (argc == 4) {
         printf("PARALLEL SEARCH!\n");
@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
         sorted_files = sorting_files(arr_of_files, &files_count, &search_data);
     }
     clock_t end = clock();
-    printf("\nTIME: %ld\n", end - start);
+    printf("\nTIME: %f\n", (float)(end - start) / CLOCKS_PER_SEC);
     printf("\nTOP %d files:\n", TOP_SIZE);
     if (files_count) print_top_of_files(sorted_files, files_count < TOP_SIZE ? files_count : TOP_SIZE);
 

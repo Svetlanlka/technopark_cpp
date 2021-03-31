@@ -21,7 +21,7 @@ install:
   - pip install codecov
 
 script:
-  - cppcheck --inconclusive --enable=all --suppress=missingIncludeSystem --language=c  src/*.c include/*.h
+  - cppcheck src/*.c include/*.h
   - mkdir build
   - cd build
   - cmake .. && make

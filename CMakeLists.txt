@@ -16,6 +16,7 @@ file(GLOB sources
         "${PROJECT_SOURCE_DIR}/src/*.c")
 
 add_library(tp_library STATIC ${sources})
+add_library(tp_library_dynamic SHARED ${sources})
 add_executable(technopark_cpp ${sources})
 target_link_libraries(technopark_cpp ${GTEST_LIBRARIES} -lpthread)
 
@@ -36,3 +37,4 @@ add_definitions(-fprofile-arcs -ftest-coverage)
 target_link_libraries(tests -fprofile-arcs)
 target_link_libraries(tests ${GTEST_LIBRARIES} pthread)
 target_link_libraries(tests tp_library)
+target_link_libraries(tests tp_library_dynamic)

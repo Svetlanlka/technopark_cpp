@@ -1,19 +1,19 @@
-#include <search_files.h>
-#include <my_library_search_files.h>
+#include "search_files.h"
+#include "my_library_search_files.h"
 
 void * parallel_search_in_file (void * data);
 
-struct Parallel_search_data {
+typedef struct {
     char ** arr_of_files;
-    struct File_search * search_data;
+    file_search * search_data;
     int part_number;
     int count_files;
-};
+} parallel_search_data;
 
 void * parallel_search_in_file (void * data) {
     if (!data) return NULL;
 
-    struct Parallel_search_data search_data = *(struct Parallel_search_data *) data;
+    parallel_search_data search_data = *(parallel_search_data *) data;
     int * result = (int *) malloc (sizeof(int) * COUNT_CPU);
     if (!result) return NULL;
 
@@ -24,15 +24,15 @@ void * parallel_search_in_file (void * data) {
     pthread_exit ((void *) result);
 }
 
-struct File_info * parallel_sorting_files(char **arr_of_files, int * count_files, struct File_search * search_data) {
+file_info * parallel_sorting_files(char **arr_of_files, int * count_files, file_search * search_data) {
     if (!arr_of_files || !search_data || !count_files) return NULL;
 
-    struct File_info * sorted_files = malloc(sizeof(struct File_info)* (*count_files));
+    file_info * sorted_files = malloc(sizeof(file_info)* (*count_files));
     if (!sorted_files) return NULL;
 
     int thread_count = *count_files % COUNT_CPU == 0 ? *count_files / COUNT_CPU : *count_files / COUNT_CPU + 1;
-    pthread_t thread[thread_count];
-    struct Parallel_search_data data[thread_count];
+    pthread_t *thread = malloc(sizeof(pthread_t) * thread_count);
+    parallel_search_data data[thread_count];
     void *status[thread_count];
     int count_if_last_part = *count_files - (thread_count - 1) * COUNT_CPU;
 
@@ -43,12 +43,20 @@ struct File_info * parallel_sorting_files(char **arr_of_files, int * count_files
         data[i].count_files = i == thread_count - 1 ? count_if_last_part : COUNT_CPU;
 
         if (pthread_create(&thread[i], NULL, parallel_search_in_file, &data[i]) != 0) {
+            for (int j = 0; j < thread_count; ++j) {
+                free(status[j]);
+                free((void *)thread[j]);
+            }
             return NULL;
         }
     }
 
     for (size_t i = 0; i < thread_count; ++i) {
         if (pthread_join(thread[i], &status[i]) != 0) {
+            for (int j = 0; j < thread_count; ++j) {
+                free(status[j]);
+                free((void *)thread[j]);
+            }
             return NULL;
         } else {
             int * new_count = (int*)status[i];
@@ -63,6 +71,7 @@ struct File_info * parallel_sorting_files(char **arr_of_files, int * count_files
 
     for (int i = 0; i < thread_count; ++i) {
         free(status[i]);
+        free((void *)thread[i]);
     }
 
     return sorted_files;

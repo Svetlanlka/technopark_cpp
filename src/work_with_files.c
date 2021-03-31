@@ -1,5 +1,5 @@
-#include <search_files.h>
-#include <my_library_search_files.h>
+#include "search_files.h"
+#include "my_library_search_files.h"
 
 // обход всех файлов и составление списка файлов со всех папок внутри этой директории
 int read_directory(const char *dir_name, char **arr_of_files, int *files_count) {
@@ -41,7 +41,7 @@ int read_directory(const char *dir_name, char **arr_of_files, int *files_count) 
     return 0;
 }
 
-int print_top_of_files(struct File_info *sorted_files, int count_files) {
+int print_top_of_files(file_info *sorted_files, int count_files) {
     if (!sorted_files) return NULL_POINTER_ERROR;
 
     for (size_t i = 0; i < count_files; i++)
