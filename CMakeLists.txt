@@ -30,12 +30,12 @@ file(GLOB test_sources
         "${PROJECT_SOURCE_DIR}/test/*.cpp")
 
 add_executable(tests ${test_sources})
+add_test(gtest ${EXECUTABLE_OUTPUT_PATH}/tests)
+add_definitions(-fprofile-arcs -ftest-coverage)
+target_link_libraries(tests tp_library dl)
+target_link_libraries(tests ${GTEST_LIBRARIES} -lpthread)
 
 enable_testing()
 
-add_test(gtest ${EXECUTABLE_OUTPUT_PATH}/tests)
-add_definitions(-fprofile-arcs -ftest-coverage)
-target_link_libraries(tests -fprofile-arcs)
-target_link_libraries(tests ${GTEST_LIBRARIES} pthread)
-target_link_libraries(tests tp_library)
+#target_link_libraries(tests -fprofile-arcs)
 #target_link_libraries(tests tp_library_dynamic)

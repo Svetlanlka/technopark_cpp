@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
-#include "string.h"
+#include <string.h>
+#include <pthread.h>
 
 extern "C" {
     #include "search_files.h"
@@ -13,12 +14,8 @@ TEST(sorting_files, ok) {
     int files_count = 0;
 
     read_directory("../testing_directory3", arr_of_files, &files_count);
+    file_info * sorted_files = parallel_sorting_files(arr_of_files, &files_count, &search_data);
 
-    file_info *sorted_files = sorting_files(arr_of_files, &files_count, &search_data);
-
-    for (int j = 0; j < files_count; j++) {
-        printf("file[%d]: %s, count: %d\n", j, sorted_files[j].filepath, sorted_files[j].count);
-    }
     EXPECT_STREQ(sorted_files[0].filepath, "../testing_directory3/bfile.txt");
     EXPECT_EQ(sorted_files[0].count, 100);
     EXPECT_STREQ(sorted_files[1].filepath, "../testing_directory3/ifile.txt");
@@ -66,6 +63,7 @@ TEST(sorting_files, null_search_ptr) {
     free(sorted_files);
     delete [] arr_of_files;
 }
+
 
 TEST(sorting_files, file_not_open) {
     const char *query = "cpp";
@@ -145,7 +143,7 @@ TEST(print_top_of_files, ok) {
     file_search search_data  = {(char *)query, 3};
     char **arr_of_files = new char * [FILES_COUNT];
     int files_count = 0;
-    read_directory("../testing_directory3", arr_of_files, &files_count);
+    read_directory("../testing_directory", arr_of_files, &files_count);
     file_info *sorted_files = sorting_files(arr_of_files, &files_count, &search_data);
     ASSERT_EQ(print_top_of_files(sorted_files, TOP_SIZE), 0);
 

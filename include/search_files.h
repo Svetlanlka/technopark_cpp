@@ -33,7 +33,7 @@ typedef struct {
 } file_search;
 
 int read_directory (const char * dir_name, char ** arr_of_files, int * files_count);
-file_info* sorting_files (char **arr_of_files, int * count_files, file_search * search_data);
+file_info * sorting_files (char **arr_of_files, int * count_files, file_search * search_data);
 int print_top_of_files(file_info *sorted_files, int count_files);
 
 file_info * parallel_sorting_files(char **arr_of_files, int * count_files, file_search * search_data);
