@@ -4,12 +4,13 @@
 #define SIZE 256
 #define TOP_SIZE 5
 #define FILES_COUNT 500
-#define COUNT_CPU 8
+#define COUNT_CPU 1
 #define PROGRAM_ERROR 1
 #define NULL_POINTER_ERROR 2
 #define OPEN_FILE_ERROR 3
 #define INPUT_ERROR 4
 #define MEMORY_ERROR 5
+#define LIBRARY_OPEN_ERROR 6
 #define MAIN_LOG 0
 
 #include <stdlib.h>

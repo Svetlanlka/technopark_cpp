@@ -31,7 +31,7 @@ file_info * parallel_sorting_files(char **arr_of_files, int * count_files, file_
     if (!sorted_files) return NULL;
 
     int thread_count = *count_files % COUNT_CPU == 0 ? *count_files / COUNT_CPU : *count_files / COUNT_CPU + 1;
-    pthread_t *thread = malloc(sizeof(pthread_t) * thread_count);
+    pthread_t *thread = (pthread_t *) malloc(sizeof(pthread_t) * thread_count);
     parallel_search_data data[thread_count];
     void *status[thread_count];
     int count_if_last_part = *count_files - (thread_count - 1) * COUNT_CPU;
@@ -43,9 +43,9 @@ file_info * parallel_sorting_files(char **arr_of_files, int * count_files, file_
         data[i].count_files = i == thread_count - 1 ? count_if_last_part : COUNT_CPU;
 
         if (pthread_create(&thread[i], NULL, parallel_search_in_file, &data[i]) != 0) {
+            free(thread);
             for (int j = 0; j < thread_count; ++j) {
                 free(status[j]);
-                free((void *)thread[j]);
             }
             return NULL;
         }
@@ -53,9 +53,9 @@ file_info * parallel_sorting_files(char **arr_of_files, int * count_files, file_
 
     for (size_t i = 0; i < thread_count; ++i) {
         if (pthread_join(thread[i], &status[i]) != 0) {
+            free(thread);
             for (int j = 0; j < thread_count; ++j) {
                 free(status[j]);
-                free((void *)thread[j]);
             }
             return NULL;
         } else {
@@ -68,11 +68,11 @@ file_info * parallel_sorting_files(char **arr_of_files, int * count_files, file_
             }
         }
     }
-
+    
     for (int i = 0; i < thread_count; ++i) {
         free(status[i]);
-        free((void *)thread[i]);
     }
+    free(thread);
 
     return sorted_files;
 }
