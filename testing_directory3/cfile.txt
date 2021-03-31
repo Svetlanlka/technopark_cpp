@@ -1,0 +1,2 @@
+count of word: 1
+cpp fdsvdsv

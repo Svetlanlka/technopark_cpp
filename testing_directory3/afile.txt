@@ -1,0 +1,7 @@
+count of word: 12
+cpp vdacpp
+cppvad cpp
+cpp fdavcpp
+cpp csadcasdvcpp
+cpp avdcpp
+cpp avcpp
